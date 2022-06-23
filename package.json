@@ -1,5 +1,5 @@
 {
-  "name": "my-marketplace",
+  "name": "harfang-frontend",
   "private": true,
   "scripts": {
     "dev": "next dev",
