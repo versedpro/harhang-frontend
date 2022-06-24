@@ -4,6 +4,7 @@ import React from "react";
 import styles from "../styles/Home.module.css";
 import SearchBar from "./search";
 import NavigateBar from "./navigate";
+import UserMenu from "./userMenu";
 
 export default function Header() {
   // Helpful thirdweb hooks to connect and manage the wallet from metamask.
@@ -28,25 +29,7 @@ export default function Header() {
       </div>
       <div className={styles.right}>
         <NavigateBar />
-        {address ? (
-          <>
-            <a
-              className={styles.secondaryButton}
-              onClick={() => disconnectWallet()}
-            >
-              Disconnect Wallet
-            </a>
-            <p style={{ marginLeft: 8, marginRight: 8, color: "grey" }}>|</p>
-            <p>{address.slice(0, 6).concat("...").concat(address.slice(-4))}</p>
-          </>
-        ) : (
-          <a
-            className={styles.mainButton}
-            onClick={() => connectWithMetamask()}
-          >
-            Connect Wallet
-          </a>
-        )}
+        <UserMenu />
       </div>
     </div>
   );
