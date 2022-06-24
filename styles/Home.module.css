@@ -78,17 +78,18 @@
 }
 
 .header {
-  background-color: #262936;
+  background-color: #FFFFFF;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 96px;
+  height: 88px;
   margin-bottom: 96px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  padding: 12px 24px;
 }
 
 .left {
@@ -96,8 +97,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
   margin-left: 5%;
+  padding: 0;
+  gap: 48px;
+
+  width: 681px;
+  height: 64px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  z-index: 0;
+}
+
+.logo {
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
 
 .right {

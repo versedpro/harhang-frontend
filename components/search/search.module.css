@@ -1,0 +1,38 @@
+
+.searchBar input {
+  width: 574.09px;
+  height: 44px;
+
+  /* Primary/Primary 500 */
+  background: #1D4E7A;
+  border: none;
+  border-radius: 12px;
+  outline: 0ch;
+
+  /* Paragraph semi-bold */
+  font-family: 'Readex Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  
+  /* Shades/White */
+  color: #FFFFFF;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.searchBar input::placeholder {
+  color: white;
+}
+
+.searchBar input:-ms-input-placeholder {
+  color: white;
+}
+
+.searchBar input::-ms-input-placeholder {
+  color: white;
+}
