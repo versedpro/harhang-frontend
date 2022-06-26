@@ -1,0 +1,101 @@
+/* For single card component */
+.wrapper {
+  @apply bg-white hover:shadow-none cursor-pointer flex flex-col items-center justify-center;
+}
+
+.wrapperAnime {
+  @apply transition-all duration-500 ease-in-out;
+}
+
+.header {
+  @apply relative mx-2;
+}
+
+.imageWrapper {
+  @apply overflow-hidden;
+  border-radius: 11px;
+  width: 140px;
+}
+
+.image {
+  @apply object-cover w-full h-full;
+}
+
+.textWrapper {
+  @apply pt-1 w-full px-2;
+}
+
+.textTitle {
+  @apply text-ellipsis overflow-hidden;
+  font-family: 'Readex Pro';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 24px;
+  /* identical to box height */
+  align-items: center;
+
+  /* Shades/Black */
+  color: #002053;
+
+  white-space: nowrap;
+  width: 140px;
+}
+
+.region {
+  @apply flex flex-row;
+  width: 140px;
+}
+
+.textRegion {
+  @apply text-ellipsis overflow-hidden;
+  font-family: 'Readex Pro';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+  display: flex;
+  align-items: center;
+
+  /* Shades/Black */
+  color: #002053;
+
+  white-space: nowrap;
+}
+
+.badgeWrapper {
+  @apply absolute bottom-0 left-0 mb-2 ml-2 mr-2 flex flex-row;
+  width: 88%;
+  justify-content: space-between;
+}
+
+.dangerBadge {
+  @apply flex items-center justify-center text-xl text-red-500 hover:text-white;
+}
+
+.primaryBadge {
+  font-family: 'Readex Pro';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #4486EA;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 5px;
+  gap: 4px;
+
+  background: #FFFFFF;
+  border-radius: 3px;
+}
+
+.counter {
+}
+
+.badgeAnime {
+  @apply transform-gpu translate-y-0 hover:-translate-y-1 transition-all duration-300 ease-in-out;
+}

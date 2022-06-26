@@ -53,6 +53,7 @@ export default function SearchBar() {
           placeholder="Search" 
           autoComplete='off' 
           value={query}
+          onChange={onChange}
         />
       </div>
       { active && results.length > 0 && (

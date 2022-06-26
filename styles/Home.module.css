@@ -34,12 +34,13 @@
 }
 
 .container {
+  @apply mx-auto;
   margin-top: 96px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  width: 1392px;
 }
 
 .page {
