@@ -1,12 +1,8 @@
-import {
-  useMarketplace,
-  useNetwork,
-  useNetworkMismatch,
-} from "@thirdweb-dev/react";
-import { NATIVE_TOKEN_ADDRESS, TransactionResult } from "@thirdweb-dev/sdk";
-import type { NextPage } from "next";
-import { useRouter } from "next/router";
-import styles from "../styles/Home.module.css";
+import { useMarketplace, useNetwork, useNetworkMismatch } from '@thirdweb-dev/react';
+import { NATIVE_TOKEN_ADDRESS, TransactionResult } from '@thirdweb-dev/sdk';
+import type { NextPage } from 'next';
+import { useRouter } from 'next/router';
+import styles from '../styles/Home.module.css';
 
 const Create: NextPage = () => {
   // Next JS Router hook to redirect to other pages
@@ -16,7 +12,7 @@ const Create: NextPage = () => {
 
   // Connect to our marketplace contract via the useMarketplace hook
   const marketplace = useMarketplace(
-    "0x277C0FB19FeD09c785448B8d3a80a78e7A9B8952" // Your marketplace contract address here
+    '0x277C0FB19FeD09c785448B8d3a80a78e7A9B8952' // Your marketplace contract address here
   );
 
   // This function gets called when the form is submitted.
@@ -35,26 +31,17 @@ const Create: NextPage = () => {
       let transactionResult: undefined | TransactionResult = undefined;
 
       // De-construct data from form submission
-      const { listingType, contractAddress, tokenId, price } =
-        e.target.elements;
+      const { listingType, contractAddress, tokenId, price } = e.target.elements;
 
       // Depending on the type of listing selected, call the appropriate function
       // For Direct Listings:
-      if (listingType.value === "directListing") {
-        transactionResult = await createDirectListing(
-          contractAddress.value,
-          tokenId.value,
-          price.value
-        );
+      if (listingType.value === 'directListing') {
+        transactionResult = await createDirectListing(contractAddress.value, tokenId.value, price.value);
       }
 
       // For Auction Listings:
-      if (listingType.value === "auctionListing") {
-        transactionResult = await createAuctionListing(
-          contractAddress.value,
-          tokenId.value,
-          price.value
-        );
+      if (listingType.value === 'auctionListing') {
+        transactionResult = await createAuctionListing(contractAddress.value, tokenId.value, price.value);
       }
 
       // If the transaction succeeds, take the user back to the homepage to view their listing!
@@ -66,11 +53,7 @@ const Create: NextPage = () => {
     }
   }
 
-  async function createAuctionListing(
-    contractAddress: string,
-    tokenId: string,
-    price: string
-  ) {
+  async function createAuctionListing(contractAddress: string, tokenId: string, price: string) {
     try {
       const transaction = await marketplace?.auction.createListing({
         assetContractAddress: contractAddress, // Contract Address of the NFT
@@ -80,7 +63,7 @@ const Create: NextPage = () => {
         quantity: 1, // How many of the NFTs are being listed (useful for ERC 1155 tokens)
         reservePricePerToken: 0, // Minimum price, users cannot bid below this amount
         startTimestamp: new Date(), // When the listing will start
-        tokenId: tokenId, // Token ID of the NFT.
+        tokenId: tokenId // Token ID of the NFT.
       });
 
       return transaction;
@@ -89,11 +72,7 @@ const Create: NextPage = () => {
     }
   }
 
-  async function createDirectListing(
-    contractAddress: string,
-    tokenId: string,
-    price: string
-  ) {
+  async function createDirectListing(contractAddress: string, tokenId: string, price: string) {
     try {
       const transaction = await marketplace?.direct.createListing({
         assetContractAddress: contractAddress, // Contract Address of the NFT
@@ -102,7 +81,7 @@ const Create: NextPage = () => {
         listingDurationInSeconds: 60 * 60 * 24 * 7, // When the auction will be closed and no longer accept bids (1 Week)
         quantity: 1, // How many of the NFTs are being listed (useful for ERC 1155 tokens)
         startTimestamp: new Date(0), // When the listing will start
-        tokenId: tokenId, // Token ID of the NFT.
+        tokenId: tokenId // Token ID of the NFT.
       });
 
       return transaction;
@@ -116,9 +95,7 @@ const Create: NextPage = () => {
       <div className={styles.container}>
         {/* Form Section */}
         <div className={styles.collectionContainer}>
-          <h1 className={styles.ourCollection}>
-            Upload your NFT to the marketplace:
-          </h1>
+          <h1 className={styles.ourCollection}>Upload your NFT to the marketplace:</h1>
 
           {/* Toggle between direct listing and auction listing */}
           <div className={styles.listingTypeContainer}>
@@ -146,34 +123,15 @@ const Create: NextPage = () => {
           </div>
 
           {/* NFT Contract Address Field */}
-          <input
-            type="text"
-            name="contractAddress"
-            className={styles.textInput}
-            placeholder="NFT Contract Address"
-          />
+          <input type="text" name="contractAddress" className={styles.textInput} placeholder="NFT Contract Address" />
 
           {/* NFT Token ID Field */}
-          <input
-            type="text"
-            name="tokenId"
-            className={styles.textInput}
-            placeholder="NFT Token ID"
-          />
+          <input type="text" name="tokenId" className={styles.textInput} placeholder="NFT Token ID" />
 
           {/* Sale Price For Listing Field */}
-          <input
-            type="text"
-            name="price"
-            className={styles.textInput}
-            placeholder="Sale Price"
-          />
+          <input type="text" name="price" className={styles.textInput} placeholder="Sale Price" />
 
-          <button
-            type="submit"
-            className={styles.mainButton}
-            style={{ marginTop: 32, borderStyle: "none" }}
-          >
+          <button type="submit" className={styles.mainButton} style={{ marginTop: 32, borderStyle: 'none' }}>
             List NFT
           </button>
         </div>
