@@ -2,6 +2,8 @@ import { Menu, Transition } from '@headlessui/react';
 import { Fragment, useEffect, useRef, useState } from 'react';
 import styles from './userMenu.module.css';
 import { useAddress, useMetamask, useDisconnect } from '@thirdweb-dev/react';
+import { IconContext } from 'react-icons/lib';
+import { TbWallet } from 'react-icons/tb';
 
 export default function UserMenu() {
   const address = useAddress();
@@ -51,16 +53,22 @@ export default function UserMenu() {
         </Transition>
       </Menu>
       {address ? (
-        <>
-          <a className={styles.secondaryButton} onClick={() => disconnectWallet()}>
-            Disconnect Wallet
-          </a>
-          <p style={{ marginLeft: 8, marginRight: 8, color: 'grey' }}>|</p>
-          <p>{address.slice(0, 6).concat('...').concat(address.slice(-4))}</p>
-        </>
-      ) : (
+        // <>
+        //   <a className={styles.secondaryButton} onClick={() => disconnectWallet()}>
+        //     Disconnect Wallet
+        //   </a>
+        //   <p style={{ marginLeft: 8, marginRight: 8, color: 'grey' }}>|</p>
+        //   <p>{address.slice(0, 6).concat('...').concat(address.slice(-4))}</p>
+        // </>
         <div className={styles.profile}>
-          <img src="/image/pp.png" alt="user" onClick={() => connectWithMetamask()} />
+          <img src="/image/pp.png" alt="user" onClick={() => disconnectWallet()} />
+        </div>
+      ) : (
+        <div className={styles.profileUnconnected}>
+          <IconContext.Provider value={{ color: '#317EF7', className: 'w-10 h-10' }}>
+            <TbWallet onClick={() => connectWithMetamask()} />
+          </IconContext.Provider>
+          {/* <img src="/image/pp.png" alt="user" onClick={() => connectWithMetamask()} /> */}
         </div>
       )}
     </div>
