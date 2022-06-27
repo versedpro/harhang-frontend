@@ -1,6 +1,6 @@
 /* For container of items */
 .itemContainer {
-  @apply container mx-auto px-0 md:px-4 py-4;
+  @apply px-0 pt-28 pb-4;
 }
 
 .layout {

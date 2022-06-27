@@ -11,7 +11,7 @@ export default function NavigateBar() {
       <Link href='/'>
         <div className={styles.iconBox}>
           <img
-          src='/icon-home.svg'
+          src='/image/icon-home.svg'
           alt='homepage'
           style={{ cursor: 'pointer' }}
         />
@@ -20,7 +20,7 @@ export default function NavigateBar() {
       <Link href='/collection'>
         <div className={styles.iconBox}>
           <img
-          src='/icon-collection.svg'
+          src='/image/icon-collection.svg'
           alt='collection'
           style={{ cursor: 'pointer' }}
         />
@@ -29,7 +29,7 @@ export default function NavigateBar() {
       <Link href='/plus'>
         <div className={styles.iconBox}>
           <img
-          src='/icon-plus.svg'
+          src='/image/icon-plus.svg'
           alt='create'
           style={{ cursor: 'pointer' }}
         />
@@ -38,7 +38,7 @@ export default function NavigateBar() {
       <Link href='/send'>
         <div className={styles.iconBox}>
           <img
-          src='/icon-send.svg'
+          src='/image/icon-send.svg'
           alt='send'
           style={{ cursor: 'pointer' }}
         />
@@ -47,7 +47,7 @@ export default function NavigateBar() {
       <Link href='/map'>
         <div className={styles.iconBox}>
           <img
-          src='/icon-map.svg'
+          src='/image/icon-map.svg'
           alt='map'
           style={{ cursor: 'pointer' }}
         />

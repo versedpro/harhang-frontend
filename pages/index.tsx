@@ -25,7 +25,7 @@ const Home: NextPage = () => {
   return (
     <>
       {/* Content */}
-      <div className={styles.container}>
+      <div className="container mx-auto">
         {/* Top Section */}
         {/* <h1 className={styles.h1}>NFT Marketplace w/ thirdweb + Next.JS</h1>
         <p className={styles.explain}>

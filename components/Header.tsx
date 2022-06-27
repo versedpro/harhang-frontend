@@ -13,7 +13,8 @@ export default function Header() {
   const disconnectWallet = useDisconnect();
 
   return (
-    <div className={styles.header}>
+    <nav className={styles.header}>
+    <div className="container mx-auto justify-between flex flex-row px-5">
       <div className={styles.left}>
         <div className={styles.logo}>
           <Link href="/" passHref role="button">
@@ -32,5 +33,6 @@ export default function Header() {
         <UserMenu />
       </div>
     </div>
+    </nav>
   );
 }
