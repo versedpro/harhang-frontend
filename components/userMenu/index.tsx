@@ -15,7 +15,7 @@ export default function UserMenu() {
           <Menu.Button>
             <img 
               className={styles.notification}
-              src='/notifications.svg'
+              src='/image/notifications.svg'
               alt='notifications'
               style={{ cursor: 'pointer' }}
             />
@@ -40,13 +40,13 @@ export default function UserMenu() {
                     } group flex w-full items-center rounded-md px-2 py-2`}
                   >
                     <img
-                      src='/dot.png'
+                      src='/image/dot.png'
                       alt='unread'
                       width={9}
                       className='mr-2'
                     />
                     <img
-                      src='/pp-1.png'
+                      src='/image/pp-1.png'
                       alt='user'
                       className='mr-4'
                     />
@@ -73,7 +73,7 @@ export default function UserMenu() {
       ) : (
         <div className={styles.profile}>
           <img
-            src='/pp.png'
+            src='/image/pp.png'
             alt='user'
             onClick={() => connectWithMetamask()}
           />
