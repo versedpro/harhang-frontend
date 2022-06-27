@@ -27,7 +27,6 @@
 
 .textTitle {
   @apply text-ellipsis overflow-hidden;
-  font-family: 'Readex Pro';
   font-style: normal;
   font-weight: 500;
   font-size: 19px;
@@ -49,7 +48,6 @@
 
 .textRegion {
   @apply text-ellipsis overflow-hidden;
-  font-family: 'Readex Pro';
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
@@ -75,7 +73,6 @@
 }
 
 .primaryBadge {
-  font-family: 'Readex Pro';
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
