@@ -21,35 +21,60 @@ const Home: NextPage = () => {
     <>
       {/* Content */}
       <div className="container mx-auto">
-        {/* Top Section */}
-        {/* <h1 className={styles.h1}>NFT Marketplace w/ thirdweb + Next.JS</h1>
-        <p className={styles.explain}>
-          Build an NFT marketplace using{" "}
-          <b>
-            {" "}
-            <a
-              href="https://thirdweb.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.purple}
-            >
-              thirdweb
-            </a>
-          </b>{" "}
-          to list your ERC721 and ERC1155 tokens for auction or for direct sale.
-        </p>
+        {/* Follow section */}
+        <div className="pt-40">
+          <div className="flex flex-col justify-between md:flex-row">
+            <div className="flex flex-row sl:flex-col items-center">
+              <p className={styles.linkTitle}>You follow</p>
+              <img
+                className={styles.extraLink}
+                src="/image/link.svg"
+                onClick={() => window.open('/follow', '_blnak')}
+              />
+            </div>
+            <div className="flex flex-row items-center">
+              <img src="/image/cards-button.png" style={{ cursor: 'pointer' }} />
+              <img src="/image/stamps-button.png" className="ml-8" style={{ cursor: 'pointer' }} />
+            </div>
+          </div>
+          <Container items={cards} />
+        </div>
 
-        <hr className={styles.divider} />
+        {/* Trending section */}
+        <div className="pt-8">
+          <div className="flex flex-col justify-between md:flex-row">
+            <div className="flex flex-row sl:flex-col items-center">
+              <p className={styles.linkTitle}>Trending</p>
+              <img
+                className={styles.extraLink}
+                src="/image/link.svg"
+                onClick={() => window.open('/trending', '_blnak')}
+              />
+            </div>
+            {/* <div className="flex flex-row items-center">
+              <img src="/image/cards-button.png" style={{ cursor: 'pointer' }} />
+              <img src="/image/stamps-button.png" className="ml-8" style={{ cursor: 'pointer' }} />
+            </div> */}
+          </div>
+          <Container items={cards} />
+        </div>
 
-        <div style={{ marginTop: 32, marginBottom: 32 }}>
-          <Link href="/create">
-            <a className={styles.mainButton} style={{ textDecoration: "none" }}>
-              Create A Listing
-            </a>
-          </Link>
-        </div> */}
-
-        <div>
+        {/* Around section */}
+        <div className="pt-8">
+          <div className="flex flex-col justify-between md:flex-row">
+            <div className="flex flex-row sl:flex-col items-center">
+              <p className={styles.linkTitle}>Around You</p>
+              <img
+                className={styles.extraLink}
+                src="/image/link.svg"
+                onClick={() => window.open('/around_you', '_blnak')}
+              />
+            </div>
+            {/* <div className="flex flex-row items-center">
+              <img src="/image/cards-button.png" style={{ cursor: 'pointer' }} />
+              <img src="/image/stamps-button.png" className="ml-8" style={{ cursor: 'pointer' }} />
+            </div> */}
+          </div>
           <Container items={cards} />
         </div>
       </div>

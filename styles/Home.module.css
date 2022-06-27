@@ -40,6 +40,21 @@
   flex-direction: row;
 }
 
+.linkTitle {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 57px;
+  line-height: 71px;
+  color: #002053;
+}
+
+.extraLink {
+  @apply ml-4;
+  width: 33px;
+  height: 33px;
+  color: #002053;
+}
+
 .secondaryButton {
   cursor: pointer;
   text-align: center;
@@ -303,7 +318,7 @@
 }
 
 .footer {
-  @apply w-full flex items-center;
+  @apply w-full flex items-center mt-12;
   background-color: #1D4E7A;
   height: 160px;
 }
