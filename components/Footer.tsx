@@ -4,7 +4,7 @@ import React from 'react';
 export default function Footer() {
   return (
     <div className={styles.footer}>
-      <div className="container mx-auto justify-between flex flex-row">
+      <div className="mx-6 w-full justify-between flex flex-row">
         <div className={styles.footerBrand}>Harfang</div>
         <div className={styles.footerLinks}>
           <div className="grid grid-cols-2" style={{ width: '250px', height: '120px' }}>

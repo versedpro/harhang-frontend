@@ -20,7 +20,7 @@ const Home: NextPage = () => {
   return (
     <>
       {/* Content */}
-      <div className="container mx-auto">
+      <div className="mx-6">
         {/* Follow section */}
         <div className="pt-40">
           <div className="flex flex-col justify-between md:flex-row">

@@ -40,7 +40,7 @@ export default function SearchBar() {
     <div className={styles.searchBar} ref={searchRef}>
       <div className="relative text-gray-600 focus-within:text-gray-400">
         <span className="absolute inset-y-0 right-0 flex items-center pr-4">
-          <img src="/search-white.svg" />
+          <img src="/image/search-white.svg" />
         </span>
         <input
           type="text"
