@@ -1,43 +1,27 @@
-import styles from "../../styles/Thirdweb.module.css";
+import styles from "../styles/Home.module.css";
 import React from "react";
 
 export default function Footer() {
-  const url = "https://github.com/thirdweb-example/marketplace-next-ts";
   return (
-    <>
-      <div
-        style={{
-          position: "fixed",
-          bottom: -120,
-          right: -80,
-          height: 300,
-          width: 150,
-          border: "1px solid #eaeaea",
-          transform: "rotate(45deg)",
-          backgroundColor: " #262935",
-          cursor: "pointer",
-        }}
-        role="button"
-        onClick={() => window.open(url, "_blank")}
-      />
-
-      <div
-        style={{
-          position: "fixed",
-          bottom: 14,
-          right: 18,
-        }}
-      >
-        <img
-          src={"/github.png"}
-          alt="github url"
-          width={40}
-          height={40}
-          role="button"
-          style={{ cursor: "pointer" }}
-          onClick={() => window.open(url, "_blank")}
-        />
+    <div className={styles.footer}>
+      <div className="container mx-auto justify-between flex flex-row">
+        <div className={styles.footerBrand}>Harfang</div>
+        <div className={styles.footerLinks}>
+          <div className="grid grid-cols-2" style={{ width: '250px', height: '120px' }}>
+            <p className={styles.footerLink}>Whitepaper</p>
+            <p className={styles.footerLink}>Help</p>
+            <p className={styles.footerLink}>Privacy Policy</p>
+            <p className={styles.footerLink}>Press</p>
+            <p className={styles.footerLink}>CGU</p>
+            <p className={styles.footerLink}>Contact</p>
+          </div>
+        </div>
+        <div className={styles.footerSocials}>
+          <img src="/image/instagram.svg" className="w-4 cursor-pointer" onClick={() => window.open('https://www.instagram.com', '_blank')} />
+          <img src="/image/discord.svg" className="w-4 cursor-pointer mx-6" onClick={() => window.open('https://www.discord.com', '_blank')} />
+          <img src="/image/twitter.svg" className="w-4 cursor-pointer" onClick={() => window.open('https://www.twitter.com', '_blank')} />
+        </div>
       </div>
-    </>
+    </div>
   );
 }
