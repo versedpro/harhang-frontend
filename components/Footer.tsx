@@ -25,7 +25,7 @@ export default function Footer() {
           <img
             src="/image/discord.svg"
             className="w-4 cursor-pointer mx-6"
-            onClick={() => window.open('https://www.discord.com', '_blank')}
+            onClick={() => window.open('https://www.discord.com/channels/989199518329364551', '_blank')}
           />
           <img
             src="/image/twitter.svg"
