@@ -10,13 +10,13 @@ export default function UserMenu() {
 
   return (
     <div className={styles.bar}>
-      <Menu as="div" className='relative inline-block text-left'>
+      <Menu as="div" className="relative inline-block text-left">
         <div>
           <Menu.Button>
-            <img 
+            <img
               className={styles.notification}
-              src='/image/notifications.svg'
-              alt='notifications'
+              src="/image/notifications.svg"
+              alt="notifications"
               style={{ cursor: 'pointer' }}
             />
           </Menu.Button>
@@ -39,17 +39,8 @@ export default function UserMenu() {
                       active ? 'bg-violet-500 text-white' : 'text-gray-900'
                     } group flex w-full items-center rounded-md px-2 py-2`}
                   >
-                    <img
-                      src='/image/dot.png'
-                      alt='unread'
-                      width={9}
-                      className='mr-2'
-                    />
-                    <img
-                      src='/image/pp-1.png'
-                      alt='user'
-                      className='mr-4'
-                    />
+                    <img src="/image/dot.png" alt="unread" width={9} className="mr-2" />
+                    <img src="/image/pp-1.png" alt="user" className="mr-4" />
                     <p className={styles.message}>user.lens</p>&nbsp;
                     <p>follwed you!</p>
                   </button>
@@ -61,25 +52,17 @@ export default function UserMenu() {
       </Menu>
       {address ? (
         <>
-          <a
-            className={styles.secondaryButton}
-            onClick={() => disconnectWallet()}
-          >
+          <a className={styles.secondaryButton} onClick={() => disconnectWallet()}>
             Disconnect Wallet
           </a>
-          <p style={{ marginLeft: 8, marginRight: 8, color: "grey" }}>|</p>
-          <p>{address.slice(0, 6).concat("...").concat(address.slice(-4))}</p>
+          <p style={{ marginLeft: 8, marginRight: 8, color: 'grey' }}>|</p>
+          <p>{address.slice(0, 6).concat('...').concat(address.slice(-4))}</p>
         </>
       ) : (
         <div className={styles.profile}>
-          <img
-            src='/image/pp.png'
-            alt='user'
-            onClick={() => connectWithMetamask()}
-          />
+          <img src="/image/pp.png" alt="user" onClick={() => connectWithMetamask()} />
         </div>
-        
       )}
     </div>
-  )
+  );
 }

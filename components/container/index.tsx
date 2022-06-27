@@ -1,6 +1,6 @@
-import styles from "./container.module.css";
-import { useRouter } from "next/router";
-import Card from "../card";
+import styles from './container.module.css';
+import { useRouter } from 'next/router';
+import Card from '../card';
 
 interface Item {
   title: string;
@@ -8,10 +8,10 @@ interface Item {
   price: number;
   currency: string;
   image: string;
-  like: boolean,
+  like: boolean;
 }
 
-export default function Container ({ items }: { items: Item[] }) {
+export default function Container({ items }: { items: Item[] }) {
   const router = useRouter();
 
   return (
@@ -31,4 +31,4 @@ export default function Container ({ items }: { items: Item[] }) {
       </div>
     </section>
   );
-};
+}

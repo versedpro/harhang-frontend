@@ -5,7 +5,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "eslint": "eslint \"**/*.{js,jsx,ts,tsx}\"",
+    "eslint-and-fix": "eslint \"**/*.{js,jsx,ts,tsx}\" --fix",
+    "format:check": "prettier --config .prettierrc '**/*.{js,jsx,ts,tsx}' --check",
+    "format:write": "prettier --config .prettierrc '**/*.{js,jsx,ts,tsx}' --write"
   },
   "dependencies": {
     "@headlessui/react": "^1.6.5",
@@ -24,6 +28,7 @@
     "eslint": "^8.14.0",
     "eslint-config-next": "^12.1.5",
     "postcss": "^8.4.14",
+    "prettier": "^2.7.1",
     "react-icons": "^4.4.0",
     "react-select": "^5.3.2",
     "tailwindcss": "^3.1.4",

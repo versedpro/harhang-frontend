@@ -1,26 +1,21 @@
-import type { NextPage } from "next";
-import styles from "../styles/Home.module.css";
-import Link from "next/link";
-import {
-  MediaRenderer,
-  useActiveListings,
-  useMarketplace,
-} from "@thirdweb-dev/react";
-import { useRouter } from "next/router";
-import Card from "../components/card";
-import cards from "../data/cards";
-import Container from "../components/container";
+import type { NextPage } from 'next';
+import styles from '../styles/Home.module.css';
+import Link from 'next/link';
+import { MediaRenderer, useActiveListings, useMarketplace } from '@thirdweb-dev/react';
+import { useRouter } from 'next/router';
+import Card from '../components/card';
+import cards from '../data/cards';
+import Container from '../components/container';
 
 const Home: NextPage = () => {
   const router = useRouter();
 
   // Connect your marketplace smart contract here (replace this address)
   const marketplace = useMarketplace(
-    "0x277C0FB19FeD09c785448B8d3a80a78e7A9B8952" // Your marketplace contract address here
+    '0x277C0FB19FeD09c785448B8d3a80a78e7A9B8952' // Your marketplace contract address here
   );
 
-  const { data: listings, isLoading: loadingListings } =
-    useActiveListings(marketplace);
+  const { data: listings, isLoading: loadingListings } = useActiveListings(marketplace);
 
   return (
     <>

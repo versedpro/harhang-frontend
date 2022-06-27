@@ -1,5 +1,5 @@
-import styles from "../styles/Home.module.css";
-import React from "react";
+import styles from '../styles/Home.module.css';
+import React from 'react';
 
 export default function Footer() {
   return (
@@ -17,9 +17,21 @@ export default function Footer() {
           </div>
         </div>
         <div className={styles.footerSocials}>
-          <img src="/image/instagram.svg" className="w-4 cursor-pointer" onClick={() => window.open('https://www.instagram.com', '_blank')} />
-          <img src="/image/discord.svg" className="w-4 cursor-pointer mx-6" onClick={() => window.open('https://www.discord.com', '_blank')} />
-          <img src="/image/twitter.svg" className="w-4 cursor-pointer" onClick={() => window.open('https://www.twitter.com', '_blank')} />
+          <img
+            src="/image/instagram.svg"
+            className="w-4 cursor-pointer"
+            onClick={() => window.open('https://www.instagram.com', '_blank')}
+          />
+          <img
+            src="/image/discord.svg"
+            className="w-4 cursor-pointer mx-6"
+            onClick={() => window.open('https://www.discord.com', '_blank')}
+          />
+          <img
+            src="/image/twitter.svg"
+            className="w-4 cursor-pointer"
+            onClick={() => window.open('https://www.twitter.com', '_blank')}
+          />
         </div>
       </div>
     </div>
