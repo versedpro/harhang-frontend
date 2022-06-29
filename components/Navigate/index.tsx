@@ -1,6 +1,6 @@
 import { useCallback, useRef, useState } from 'react';
 import Link from 'next/link';
-import styles from './navigate.module.css';
+import styles from './Navigate.module.css';
 
 export default function NavigateBar() {
   return (

@@ -1,11 +1,11 @@
 import { Fragment, useEffect, useRef, useState } from 'react';
 import type { NextPage } from 'next';
-import styles from './create.module.css';
+import styles from './Create.module.css';
 import Link from 'next/link';
 import { Menu, Transition } from '@headlessui/react';
 import { MediaRenderer, useActiveListings, useMarketplace } from '@thirdweb-dev/react';
 import { useRouter } from 'next/router';
-import BingMapsReact from '../../components/map';
+import BingMapsReact from '../../components/Map';
 
 const Create: NextPage = () => {
   const router = useRouter();

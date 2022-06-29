@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import styles from './card.module.css';
+import styles from './Card.module.css';
 
 const Card = ({
   title,
