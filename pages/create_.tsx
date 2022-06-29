@@ -4,7 +4,7 @@ import type { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import styles from '../styles/Home.module.css';
 
-const Create: NextPage = () => {
+const Create_: NextPage = () => {
   // Next JS Router hook to redirect to other pages
   const router = useRouter();
   const networkMismatch = useNetworkMismatch();
@@ -140,4 +140,4 @@ const Create: NextPage = () => {
   );
 };
 
-export default Create;
+export default Create_;
