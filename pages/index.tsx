@@ -3,7 +3,7 @@ import styles from '../styles/Home.module.css';
 import Link from 'next/link';
 import { MediaRenderer, useActiveListings, useMarketplace } from '@thirdweb-dev/react';
 import { useRouter } from 'next/router';
-import Card from '../components/Card';
+import Card from '../components/Card/FormCard';
 import cards from '../data/cards';
 import Container from '../components/Container';
 
