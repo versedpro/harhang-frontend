@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Menu, Transition } from '@headlessui/react';
 import { MediaRenderer, useActiveListings, useMarketplace } from '@thirdweb-dev/react';
 import { useRouter } from 'next/router';
-import BingMapsReact from 'bingmaps-react';
+import BingMapsReact from '../../components/map';
 
 const Create: NextPage = () => {
   const router = useRouter();
@@ -15,17 +15,7 @@ const Create: NextPage = () => {
       {/* Map section */}
       <div className="mx-auto pt-40 w-full">
         <div className={styles.title}>Choose a location</div>
-        <BingMapsReact
-          height="670.56px"
-          bingMapsKey="AtX6MlcR2y6S7nioFZbnCen9vBj9mEssBUxozRkd2SoTKAKWsfCCBRf87_H_9X3S"
-          mapOptions={{
-            navigationBarMode: 'square'
-          }}
-          viewOptions={{
-            center: { latitude: 42.360081, longitude: -71.058884 },
-            mapTypeId: 'road'
-          }}
-        />
+        <BingMapsReact />
       </div>
       <div className="flex justify-end">
         <button className={styles.locateButton}>Locate</button>
