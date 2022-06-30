@@ -2,12 +2,8 @@ import { useEffect, useState } from 'react';
 import BingMapsReact, { map } from '../../utils/bingmaps/bingMaps';
 import mapOptions from '../../utils/bingmaps/mapOptions';
 
-export default function Map() {
+export default function Map({ setPlace }: { setPlace: any }) {
   const [pins, setPins] = useState<any>(null);
-
-  const setPlace = (e: any) => {
-    console.log(e);
-  };
 
   useEffect(() => {
     setTimeout(() => {

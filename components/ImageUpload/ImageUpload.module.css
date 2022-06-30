@@ -1,0 +1,42 @@
+.title {
+  @apply items-center flex justify-center mb-[21px];
+  font-style: normal;
+  font-size: 47px;
+  font-weight: 700;
+  line-height: 59px;
+  color: #102A53;
+}
+
+.locateButton {
+  @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2.5 px-3.5 mt-5 rounded;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 34px;
+}
+
+.label {
+  @apply flex justify-center mx-auto w-[369px] cursor-pointer;
+}
+
+.file {
+  @apply hidden;
+}
+
+.editContainer {
+  @apply relative h-[656px] w-full flex flex-row items-center;
+}
+
+.editBackground {
+  @apply h-full w-[50%] z-10;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.editBox {
+  @apply w-[369px] h-full z-20;
+}
+
+.img {
+  object-fit: cover;
+  grid-row: 1;
+}
