@@ -36,7 +36,7 @@ export default function Map() {
       bingMapsKey="AtX6MlcR2y6S7nioFZbnCen9vBj9mEssBUxozRkd2SoTKAKWsfCCBRf87_H_9X3S"
       mapOptions={mapOptions}
       pushPins={pins}
-      height="600px"
+      height="670px"
       viewOptions={{
         mapTypeId: 'road'
       }}

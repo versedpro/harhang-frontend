@@ -14,7 +14,7 @@ export default function Header() {
 
   return (
     <nav className={styles.header}>
-      <div className="mx-6 w-full justify-between flex flex-row items-center">
+      <div className="mx-6 md:w-full justify-between flex flex-col md:flex-row items-center">
         <div className={styles.left}>
           <div className={styles.logo}>
             <Link href="/" passHref role="button">

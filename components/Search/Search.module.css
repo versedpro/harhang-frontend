@@ -1,6 +1,6 @@
 
 .searchBar input {
-  width: 574.09px;
+  @apply w-56 md:w-[570.09px];
   height: 44px;
 
   /* Primary/Primary 500 */

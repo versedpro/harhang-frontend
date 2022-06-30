@@ -1,6 +1,6 @@
 import styles from './Container.module.css';
 import { useRouter } from 'next/router';
-import Card from '../Card/GeoCard';
+import Card from '../Card/FormCard';
 
 interface Item {
   title: string;

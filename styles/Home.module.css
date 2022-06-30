@@ -1,5 +1,6 @@
 .header {
-  @apply w-full flex flex-wrap items-center justify-between;
+  @apply md:w-full flex flex-col md:flex-row items-center justify-between;
+  width: 100%;
   background-color: #FFFFFF;
   position: fixed;
   height: 88px;
