@@ -24,19 +24,13 @@
 }
 
 .editContainer {
-  @apply relative h-[656px] w-full flex flex-row items-center;
+  @apply relative w-full items-center;
 }
 
-.editBackground {
-  @apply h-full w-[50%] z-10;
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.editBox {
-  @apply w-[369px] h-full z-20;
-}
-
-.img {
-  object-fit: cover;
-  grid-row: 1;
+.uploadButton {
+  @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2.5 px-3.5 my-5 rounded float-right;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 34px;
 }

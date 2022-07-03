@@ -914,6 +914,78 @@
   resolved "https://registry.yarnpkg.com/@react-google-maps/marker-clusterer/-/marker-clusterer-2.11.8.tgz#9b830b405cc203b305ac6f771da2e307ad30515e"
   integrity sha512-OEcdbTXEgPwdpGvVuSrhIhjcZPhlzPz2TvaKCBLraf1PKiDyLOPhlTVRlbIziLiu0xN89pJcill1w9UVIVFF+Q==
 
+"@rpldy/life-events@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@rpldy/life-events/-/life-events-1.0.0.tgz#71bc3a552103377401e8cbc24ad28558fff6c559"
+  integrity sha512-8m9tR83Igi0IvAXyiSOvV3D7lfo6VbI1s7z5NekZyX9dk7IgPgL0Le3LiUQ1MQyK437O4HhC54s1oscxsM6+lA==
+  dependencies:
+    "@rpldy/shared" "^1.0.0"
+
+"@rpldy/sender@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@rpldy/sender/-/sender-1.0.0.tgz#e93955a5f480a189bada0fedd84d581c26c5faa2"
+  integrity sha512-T/f+SN7hUqfhvbLk9zBl+puayynM8PWF07F1FtOY6H18kBFpwHLbWUX6GSqsR6I6q/9CFeKqJwK19nEUI8n1NQ==
+  dependencies:
+    "@rpldy/shared" "^1.0.0"
+
+"@rpldy/shared-ui@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@rpldy/shared-ui/-/shared-ui-1.0.0.tgz#fbe7fd9bf9976c28d880b1869e7ad7735898aa13"
+  integrity sha512-fm66TNqvfNkBs9UjuY3WvZQ79EMrZ07emXtQwXPwQGc4ze/cxv7WtN6m3KwVAIu5IT0J9tWC6h1qyMov+IERvg==
+  dependencies:
+    "@rpldy/shared" "^1.0.0"
+    "@rpldy/uploader" "^1.0.0"
+
+"@rpldy/shared@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@rpldy/shared/-/shared-1.0.0.tgz#945d8a1280285ae309bfde46a82e70d27e9a2673"
+  integrity sha512-pJaffzPswlR7GbMNp7RvPrLzkkblUtu16Smw/5bPkuv7RRnDWAeZfIRq5UTHfTlBhGk94mKV/eQlqQzjGk1qyQ==
+  dependencies:
+    invariant "^2.2.4"
+    just-throttle "^1.1.0"
+
+"@rpldy/simple-state@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@rpldy/simple-state/-/simple-state-1.0.0.tgz#d61eb6987aa07e93177250a099ce4096efa09382"
+  integrity sha512-HS//0vxHvU22CnuXTnlPlt/5Jp2QJjwbFZ2g33ORQ4tSkHQvmkU7VMvsgZBHS44O5UsoyNlg/O/QL0FvKfP8fg==
+  dependencies:
+    "@rpldy/shared" "^1.0.0"
+
+"@rpldy/upload-button@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@rpldy/upload-button/-/upload-button-1.0.0.tgz#b178320b1932855517a5a6056d573a7f2e6ef500"
+  integrity sha512-My20OHmxjB86omzLx4YWeuXrtXF5R1NW6qg4liD8iP7E0uIAKtL1Z4QQIsvk5foH46OAakNg0gIzycRbdEcD1g==
+  dependencies:
+    "@rpldy/shared-ui" "^1.0.0"
+
+"@rpldy/upload-preview@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@rpldy/upload-preview/-/upload-preview-1.0.0.tgz#6355157f7aaa5dbb07bd0ee04c3f24f5b938b267"
+  integrity sha512-dj7VnckcDidjJzPyYV22/UsYCm4h3LwC9wRm27EsS+lJRHM09VHkslAiUqDrVlL+B7bfGQUZbEIJja/S0JbQPw==
+  dependencies:
+    "@rpldy/shared" "^1.0.0"
+    "@rpldy/shared-ui" "^1.0.0"
+
+"@rpldy/uploader@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@rpldy/uploader/-/uploader-1.0.0.tgz#2b06890a35f7ee65e1d9edca63b10351b7c69854"
+  integrity sha512-dw3UNXBoUEnM8MF2ttIiTmCgoBNWaNoRPiQNCBwrh9KWTINgbl+nmwI2bCGbaBfWCHrSsjfvt9QHqWd/VUYm7g==
+  dependencies:
+    "@rpldy/life-events" "^1.0.0"
+    "@rpldy/sender" "^1.0.0"
+    "@rpldy/shared" "^1.0.0"
+    "@rpldy/simple-state" "^1.0.0"
+
+"@rpldy/uploady@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@rpldy/uploady/-/uploady-1.0.0.tgz#595353c1ef4605f68fbda20bbe79e9dc5a974261"
+  integrity sha512-EQdrdB1gvlXeUsUdLkhWS1Q7Cit7FBpK3WwBCrtODTIgmab1l+/6opHREv7/l8zfxnAf7DI/97fcFUCHt0D/8w==
+  dependencies:
+    "@rpldy/life-events" "^1.0.0"
+    "@rpldy/shared" "^1.0.0"
+    "@rpldy/shared-ui" "^1.0.0"
+    "@rpldy/uploader" "^1.0.0"
+
 "@rushstack/eslint-patch@^1.1.3":
   version "1.1.3"
   resolved "https://registry.npmjs.org/@rushstack/eslint-patch/-/eslint-patch-1.1.3.tgz"
@@ -1012,6 +1084,13 @@
   resolved "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.5.tgz"
   integrity sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==
 
+"@types/react-dom@^18.0.5":
+  version "18.0.5"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-18.0.5.tgz#330b2d472c22f796e5531446939eacef8378444a"
+  integrity sha512-OWPWTUrY/NIrjsAPkAk1wW9LZeIjSvkXRhclsFO8CZcZGCOg2G0YZy4ft+rOyYxy8B7ui5iZzi9OkDebZ7/QSA==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-transition-group@^4.4.0":
   version "4.4.5"
   resolved "https://registry.npmjs.org/@types/react-transition-group/-/react-transition-group-4.4.5.tgz"
@@ -1019,19 +1098,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*":
+"@types/react@*", "@types/react@^18.0.14":
   version "18.0.14"
-  resolved "https://registry.npmjs.org/@types/react/-/react-18.0.14.tgz"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.0.14.tgz#e016616ffff51dba01b04945610fe3671fdbe06d"
   integrity sha512-x4gGuASSiWmo0xjDLpm5mPb52syZHJx02VKbqUKdLmKtAwIh63XClGsiTI1K6DO5q7ox4xAsQrU+Gl3+gGXF9Q==
-  dependencies:
-    "@types/prop-types" "*"
-    "@types/scheduler" "*"
-    csstype "^3.0.2"
-
-"@types/react@^17.0.2":
-  version "17.0.47"
-  resolved "https://registry.npmjs.org/@types/react/-/react-17.0.47.tgz"
-  integrity sha512-mk0BL8zBinf2ozNr3qPnlu1oyVTYq+4V7WA76RgxUAtf0Em/Wbid38KN6n4abEkvO4xMTBWmnP1FtQzgkEiJoA==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -1942,6 +2012,11 @@ create-hmac@^1.1.4, create-hmac@^1.1.7:
     ripemd160 "^2.0.0"
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
+
+cropperjs@^1.5.12:
+  version "1.5.12"
+  resolved "https://registry.yarnpkg.com/cropperjs/-/cropperjs-1.5.12.tgz#d9c0db2bfb8c0d769d51739e8f916bbc44e10f50"
+  integrity sha512-re7UdjE5UnwdrovyhNzZ6gathI4Rs3KGCBSc8HCIjUo5hO42CtzyblmWLj6QWVw7huHyDMfpKxhiO2II77nhDw==
 
 cross-fetch@^3.1.4, cross-fetch@^3.1.5:
   version "3.1.5"
@@ -3020,7 +3095,7 @@ internal-slot@^1.0.3:
     has "^1.0.3"
     side-channel "^1.0.4"
 
-invariant@2.2.4:
+invariant@2.2.4, invariant@^2.2.4:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
   integrity sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA==
@@ -3278,6 +3353,11 @@ jsonify@~0.0.0:
   dependencies:
     array-includes "^3.1.4"
     object.assign "^4.1.2"
+
+just-throttle@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/just-throttle/-/just-throttle-1.1.0.tgz#178d305ece9876a8a0759abd8d403aafcc6e4849"
+  integrity sha512-iePC/13XYX1Tyn9C6jY+DG3UEejkDvrKsw5xxgGhtGUwYWmoJm4CoKexscBKELOu3FTyCDzjr21ZJ67AXnz+bg==
 
 kdbush@^3.0.0:
   version "3.0.0"
@@ -3936,6 +4016,13 @@ react-cool-dimensions@^2.0.7:
   version "2.0.7"
   resolved "https://registry.npmjs.org/react-cool-dimensions/-/react-cool-dimensions-2.0.7.tgz"
   integrity sha512-z1VwkAAJ5d8QybDRuYIXTE41RxGr5GYsv1bQhbOBE8cMfoZQZpcF0odL64vdgrQVzat2jayedj1GoYi80FWcbA==
+
+react-cropper@^2.1.8:
+  version "2.1.8"
+  resolved "https://registry.yarnpkg.com/react-cropper/-/react-cropper-2.1.8.tgz#bf35a7de65769f8ad357e8ae884e791fe3fe9212"
+  integrity sha512-QEj6CE9et/gMRqpaKMgZQdBgtzLjjq+zj1pmHwtoWG6GqscDl4QpTwoEElWN2pieYxkwFaZa0lPiD2b9nwqLKQ==
+  dependencies:
+    cropperjs "^1.5.12"
 
 react-dom@^18.1.0:
   version "18.2.0"
