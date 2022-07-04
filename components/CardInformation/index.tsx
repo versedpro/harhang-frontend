@@ -3,6 +3,7 @@ import styles from './CardInfos.module.css';
 import TextInput from '../Input/TextInput';
 import TextArea from '../Input/TextArea';
 import Toggle from '../Input/Toggle';
+import { Button } from '../Button';
 
 export default function CardInformation() {
   const [name, setName] = useState<string>('');
@@ -25,6 +26,9 @@ export default function CardInformation() {
         <div className="ml-16">
           <Toggle title="Public" checked={isPublic} setValue={setIsPublic} />
         </div>
+      </div>
+      <div className="mb-8 float-right">
+        <Button title="Create" />
       </div>
     </div>
   );

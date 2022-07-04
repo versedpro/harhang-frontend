@@ -26,11 +26,3 @@
 .editContainer {
   @apply relative w-full items-center;
 }
-
-.uploadButton {
-  @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2.5 px-3.5 my-12 rounded float-right;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 27px;
-  line-height: 34px;
-}

@@ -5,6 +5,7 @@ import { dataUrlToFile } from '../../utils/ImageEdit/convertToFile';
 import 'cropperjs/dist/cropper.css';
 import styles from './ImageUpload.module.css';
 import uploadImg from '../../public/image/Img-Upload-Default.png';
+import { Button } from '../Button';
 
 export default function ImageUpload({ setCard, card, isUploaded }: { setCard: any; card: any; isUploaded: any }) {
   const [image, setImage] = useState<string>();
@@ -92,11 +93,7 @@ export default function ImageUpload({ setCard, card, isUploaded }: { setCard: an
                 guides={true}
               />
             </div>
-            {cropData && (
-              <button className={styles.uploadButton} onClick={handleUpload}>
-                Upload
-              </button>
-            )}
+            {cropData && <Button title="Upload" onClick={handleUpload} />}
           </div>
         )}
       </div>

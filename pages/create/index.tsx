@@ -8,6 +8,7 @@ import { useRouter } from 'next/router';
 import BingMapsReact from '../../components/Map';
 import ImageUpload from '../../components/ImageUpload';
 import CardInformation from '../../components/CardInformation';
+import { Button } from '../../components/Button';
 
 const Create: NextPage = () => {
   const router = useRouter();
@@ -48,9 +49,7 @@ const Create: NextPage = () => {
             <BingMapsReact setPlace={setPlace} />
           </div>
           <div className="flex justify-end">
-            <button className={styles.locateButton} onClick={onHandleLocate}>
-              Locate
-            </button>
+            <Button title="Locate" onClick={onHandleLocate} />
           </div>
         </>
       ) : step === 2 ? (
