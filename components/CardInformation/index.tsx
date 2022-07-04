@@ -5,7 +5,7 @@ import TextArea from '../Input/TextArea';
 import Toggle from '../Input/Toggle';
 import { Button } from '../Button';
 
-export default function CardInformation() {
+export default function CardInformation({ setStep }: { setStep: any }) {
   const [name, setName] = useState<string>('');
   const [creator, setCreator] = useState<string>('');
   const [description, setDescription] = useState<string>('');
@@ -28,7 +28,7 @@ export default function CardInformation() {
         </div>
       </div>
       <div className="mb-8 float-right">
-        <Button title="Create" />
+        <Button title="Create" onClick={setStep} />
       </div>
     </div>
   );

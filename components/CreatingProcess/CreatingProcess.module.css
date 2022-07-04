@@ -1,0 +1,7 @@
+.subtitle {
+  @apply font-normal flex justify-center mx-auto;
+  font-size: 27px;
+  font-weight: 500;
+  line-height: 34px;
+  color: #102A53;
+}

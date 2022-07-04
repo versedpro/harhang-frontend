@@ -9,6 +9,7 @@ import BingMapsReact from '../../components/Map';
 import ImageUpload from '../../components/ImageUpload';
 import CardInformation from '../../components/CardInformation';
 import { Button } from '../../components/Button';
+import { CreatingProcess } from '../../components/CreatingProcess';
 
 const Create: NextPage = () => {
   const router = useRouter();
@@ -28,40 +29,52 @@ const Create: NextPage = () => {
     }
   }, [place]);
 
-  useEffect(() => {
-    console.log(isImageUploaded);
-    if (isImageUploaded) {
-      setStep(3);
-    }
-  }, [isImageUploaded]);
-
   const onHandleLocate = () => {
     setStep(2);
   };
 
+  const onHandleUpload = async (value: boolean) => {
+    await setIsImageUploaded(value);
+    setStep(3);
+  };
+
+  const onHandleSubmit = () => {
+    setStep(4);
+  };
+
+  const onHandleCreate = () => {
+    setStep(5);
+  };
+
   return (
     <div className="mx-6">
-      {step === 1 ? (
-        <>
-          {/* Map section */}
-          <div className="mx-auto pt-40 w-full">
+      <div className="mx-auto pt-40 w-full">
+        {step === 1 ? (
+          <>
+            {/* Map section */}
             <div className={styles.title}>Choose a location</div>
             <BingMapsReact setPlace={setPlace} />
-          </div>
-          <div className="flex justify-end">
-            <Button title="Locate" onClick={onHandleLocate} />
-          </div>
-        </>
-      ) : step === 2 ? (
-        <>
-          <ImageUpload setCard={setCard} card={card} isUploaded={setIsImageUploaded} />
-        </>
-      ) : (
-        <div className="mx-auto pt-40 w-full">
-          <div className={styles.title}>Fill the information</div>
-          <CardInformation />
-        </div>
-      )}
+            <div className="flex justify-end">
+              <Button title="Locate" onClick={onHandleLocate} />
+            </div>
+          </>
+        ) : step === 2 ? (
+          <>
+            <div className={styles.title}>Upload your image</div>
+            <ImageUpload setCard={setCard} card={card} isUploaded={onHandleUpload} />
+          </>
+        ) : step === 3 ? (
+          <>
+            <div className={styles.title}>Fill the information</div>
+            <CardInformation setStep={onHandleSubmit} />
+          </>
+        ) : (
+          <>
+            <div className={styles.title}>Creating your Card</div>
+            <CreatingProcess setStep={onHandleCreate} />
+          </>
+        )}
+      </div>
     </div>
   );
 };

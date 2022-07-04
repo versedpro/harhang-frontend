@@ -62,41 +62,42 @@ export default function ImageUpload({ setCard, card, isUploaded }: { setCard: an
 
   return (
     <div>
-      <div className="mx-auto pt-40 w-full">
-        <div className={styles.title}>Upload your image</div>
-        {!image ? (
-          <>
-            <label htmlFor="file" className={styles.label}>
-              <Image src={uploadImg} alt="upload your card image" width={369} height={656} layout="fixed" />
-            </label>
-            <input type="file" name="file" id="file" className={styles.file} onChange={onChange} />
-          </>
-        ) : (
-          <div className={styles.editContainer}>
-            <div style={{ width: '100%' }}>
-              <Cropper
-                style={{ height: 400, width: '100%' }}
-                zoomTo={0.5}
-                initialAspectRatio={140 / 243.54}
-                preview=".img-preview"
-                src={image}
-                viewMode={1}
-                minCropBoxHeight={10}
-                minCropBoxWidth={10}
-                background={false}
-                responsive={true}
-                autoCropArea={1}
-                checkOrientation={false} // https://github.com/fengyuanchen/cropperjs/issues/671
-                onInitialized={(instance) => {
-                  setCropper(instance);
-                }}
-                guides={true}
-              />
-            </div>
-            {cropData && <Button title="Upload" onClick={handleUpload} />}
+      {!image ? (
+        <>
+          <label htmlFor="file" className={styles.label}>
+            <Image src={uploadImg} alt="upload your card image" width={369} height={656} layout="fixed" />
+          </label>
+          <input type="file" name="file" id="file" className={styles.file} onChange={onChange} />
+        </>
+      ) : (
+        <div className={styles.editContainer}>
+          <div style={{ width: '100%' }}>
+            <Cropper
+              style={{ height: 400, width: '100%' }}
+              zoomTo={0.5}
+              initialAspectRatio={140 / 243.54}
+              preview=".img-preview"
+              src={image}
+              viewMode={1}
+              minCropBoxHeight={10}
+              minCropBoxWidth={10}
+              background={false}
+              responsive={true}
+              autoCropArea={1}
+              checkOrientation={false} // https://github.com/fengyuanchen/cropperjs/issues/671
+              onInitialized={(instance) => {
+                setCropper(instance);
+              }}
+              guides={true}
+            />
           </div>
-        )}
-      </div>
+          {cropData && (
+            <div className="float-right mb-12">
+              <Button title="Upload" onClick={handleUpload} />
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }
