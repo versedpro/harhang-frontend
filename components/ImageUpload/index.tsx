@@ -74,7 +74,7 @@ export default function ImageUpload({ setCard, card }: { setCard: any; card: any
               <Cropper
                 style={{ height: 400, width: '100%' }}
                 zoomTo={0.5}
-                initialAspectRatio={1}
+                initialAspectRatio={140 / 243.54}
                 preview=".img-preview"
                 src={image}
                 viewMode={1}
