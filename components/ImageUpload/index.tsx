@@ -6,7 +6,7 @@ import 'cropperjs/dist/cropper.css';
 import styles from './ImageUpload.module.css';
 import uploadImg from '../../public/image/Img-Upload-Default.png';
 
-export default function ImageUpload({ setCard, card }: { setCard: any; card: any }) {
+export default function ImageUpload({ setCard, card, isUploaded }: { setCard: any; card: any; isUploaded: any }) {
   const [image, setImage] = useState<string>();
   const [cropData, setCropData] = useState('#');
   const [cropper, setCropper] = useState<any>();
@@ -41,6 +41,8 @@ export default function ImageUpload({ setCard, card }: { setCard: any; card: any
 
     let ncard = { ...card, image: file };
     setCard(ncard);
+
+    isUploaded(true);
 
     /**
      * Now that we have a File object, we can upload it to S3 (or anywhere else you want)
