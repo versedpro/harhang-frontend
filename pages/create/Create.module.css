@@ -6,3 +6,18 @@
   line-height: 59px;
   color: #102A53;
 }
+
+.subtitle {
+  @apply items-center font-normal mr-6;
+  font-size: 27px;
+  font-weight: 500;
+  line-height: 34px;
+  color: #102A53;
+}
+
+.link {
+  @apply p-3 mr-6;
+  border-radius: 10px;
+  background: #CBEBFF;
+  color: #317ef7;
+}
