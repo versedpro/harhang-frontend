@@ -1,8 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
-import styles from './card.module.css';
+import styles from './Card.module.css';
 
-const Card = ({
+const GeoCard = ({
   title,
   region,
   price,
@@ -21,21 +21,21 @@ const Card = ({
     <div className={classNames([styles.wrapper, styles.wrapperAnime])}>
       <div className={styles.header}>
         <div className={styles.imageWrapper}>
-          <img src={image} className={styles.image} alt="card background" />
+          <img src={image} className={styles.image} alt="Geo image" />
         </div>
-        <div className={styles.badgeWrapper}>
+        <div className={styles.geoBadgeWrapper}>
           <div className={classNames([styles.dangerBadge, styles.badgeAnime])}>
             {like ? <img src="/image/liked.svg" /> : <img src="/image/unliked.svg" />}
           </div>
-          <div className={styles.primaryBadge}>
-            <span className={styles.counter}>{price}</span>
-            <img src={`/image/token/${currency}.svg`} />
+          <div className={styles.geoCrossBadge}>
+            <img src={`/image/cross.svg`} width={21} />
           </div>
         </div>
       </div>
-      <div className={styles.textWrapper}>
-        <div className={styles.textTitle}>{title}</div>
-        <div className={styles.region}>
+      <div className={styles.getTextWrapper}>
+        <div className={styles.geoDivide}></div>
+        <div className={classNames([styles.textTitle, 'ml-2 pt-1'])}>{title}</div>
+        <div className={classNames([styles.region, 'ml-2 pt-1'])}>
           <p className={styles.textRegion}>{region}</p>
           <img src="/image/verified.svg" alt="verify notification" />
         </div>
@@ -44,4 +44,4 @@ const Card = ({
   );
 };
 
-export default Card;
+export default GeoCard;

@@ -1,0 +1,20 @@
+.input {
+  @apply w-[312px] h-[44px] p-3 text-base font-normal transition ease-in-out m-0 focus:outline-none;
+  background: #CBEBFF;
+  border-radius: 10px;
+  border: none;
+}
+
+.inputTitle {
+  @apply font-normal mr-2;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 34px;
+}
+
+.textArea {
+  @apply w-full h-[200px] md:h-[334px] p-3 font-normal transition ease-in-out m-0 focus:outline-none;
+  background: #CBEBFF;
+  border-radius: 10px;
+  border:none;
+}

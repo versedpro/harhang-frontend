@@ -1,9 +1,10 @@
 .header {
-  @apply w-full flex flex-wrap items-center justify-between py-5;
+  @apply md:w-full flex flex-col md:flex-row items-center justify-between;
+  width: 100%;
   background-color: #FFFFFF;
   position: fixed;
   height: 88px;
-  z-index: 99;
+  z-index: 9999;
 }
 
 .left {

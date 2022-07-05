@@ -1,6 +1,6 @@
 import { useCallback, useRef, useState } from 'react';
 import Link from 'next/link';
-import styles from './search.module.css';
+import styles from './Search.module.css';
 
 export default function SearchBar() {
   const searchRef = useRef(null);

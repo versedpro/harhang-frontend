@@ -96,3 +96,24 @@
 .badgeAnime {
   @apply transform-gpu translate-y-0 hover:-translate-y-1 transition-all duration-300 ease-in-out;
 }
+
+.geoBadgeWrapper {
+  @apply absolute top-0 left-0 mt-2 ml-2 mr-2 flex flex-row;
+  width: 88%;
+  justify-content: space-between;
+}
+
+.geoCrossBadge {
+  @apply flex items-center;
+}
+
+.getTextWrapper {
+  @apply relative h-[68px] -top-[68px] pt-1 w-full px-2;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 0 0 12px 12px;
+}
+
+.geoDivide {
+  @apply flex items-center w-[59px] mx-auto;
+  border-top: 3px solid #002053;
+}

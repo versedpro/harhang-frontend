@@ -1,6 +1,6 @@
 import { Menu, Transition } from '@headlessui/react';
 import { Fragment, useEffect, useRef, useState } from 'react';
-import styles from './userMenu.module.css';
+import styles from './UserMenu.module.css';
 import { useAddress, useMetamask, useDisconnect } from '@thirdweb-dev/react';
 import { IconContext } from 'react-icons/lib';
 import { TbWallet } from 'react-icons/tb';

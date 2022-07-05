@@ -2,9 +2,9 @@ import { useAddress, useMetamask, useDisconnect } from '@thirdweb-dev/react';
 import Link from 'next/link';
 import React from 'react';
 import styles from '../styles/Home.module.css';
-import SearchBar from './search';
-import NavigateBar from './navigate';
-import UserMenu from './userMenu';
+import SearchBar from './Search';
+import NavigateBar from './Navigate';
+import UserMenu from './UserMenu';
 
 export default function Header() {
   // Helpful thirdweb hooks to connect and manage the wallet from metamask.
@@ -14,7 +14,7 @@ export default function Header() {
 
   return (
     <nav className={styles.header}>
-      <div className="mx-6 w-full justify-between flex flex-row items-center">
+      <div className="mx-6 md:w-full justify-between flex flex-col md:flex-row items-center">
         <div className={styles.left}>
           <div className={styles.logo}>
             <Link href="/" passHref role="button">
