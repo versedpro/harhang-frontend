@@ -1,9 +1,10 @@
 .header {
-  @apply w-full flex flex-wrap items-center justify-between py-5;
+  @apply md:w-full flex flex-col md:flex-row items-center justify-between;
+  width: 100%;
   background-color: #FFFFFF;
   position: fixed;
   height: 88px;
-  z-index: 99;
+  z-index: 9999;
 }
 
 .left {
@@ -38,6 +39,21 @@
   align-items: center;
   justify-content: center;
   flex-direction: row;
+}
+
+.linkTitle {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 57px;
+  line-height: 71px;
+  color: #002053;
+}
+
+.extraLink {
+  @apply ml-4;
+  width: 33px;
+  height: 33px;
+  color: #002053;
 }
 
 .secondaryButton {
@@ -303,7 +319,7 @@
 }
 
 .footer {
-  @apply w-full flex items-center;
+  @apply w-full flex items-center mt-12;
   background-color: #1D4E7A;
   height: 160px;
 }
@@ -319,7 +335,6 @@
 .footerBrand {
   @apply cursor-pointer;
   /* H1 bold */
-  font-family: 'Readex Pro';
   font-style: normal;
   font-weight: 700;
   font-size: 47px;
@@ -340,7 +355,6 @@
 
 .footerLink {
   /* Paragraph regular */
-  font-family: 'Readex Pro';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;

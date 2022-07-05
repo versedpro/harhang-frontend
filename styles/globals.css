@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    @appy font-readexPro;
+  }
+}
+
+@font-face {
+  font-family: 'Readex Pro';
+  src: url('/public/asset/font/ReadexPro/ReadexPro-Light.ttf');
+  src: url('/public/asset/font/ReadexPro/ReadexPro-Medium.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
