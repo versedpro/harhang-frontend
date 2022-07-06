@@ -1,5 +1,5 @@
 .input {
-  @apply w-[312px] h-[44px] p-3 text-base font-normal transition ease-in-out m-0 focus:outline-none;
+  @apply w-full h-[44px] p-3 text-base font-normal transition ease-in-out m-0 focus:outline-none;
   background: #CBEBFF;
   border-radius: 10px;
   border: none;
@@ -13,7 +13,7 @@
 }
 
 .textArea {
-  @apply w-full h-[200px] md:h-[334px] p-3 font-normal transition ease-in-out m-0 focus:outline-none;
+  @apply w-full h-[200px] md:h-full p-3 font-normal transition ease-in-out my-3 focus:outline-none;
   background: #CBEBFF;
   border-radius: 10px;
   border:none;
