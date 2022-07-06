@@ -15,14 +15,20 @@ export default function CardInformation({ setStep }: { setStep: any }) {
   return (
     <div>
       <div className="flex flex-col md:flex-row justify-between py-8">
-        <TextInput title="Name" onChange={(e) => setName(e.target.value)} />
-        <TextInput title="Artist" onChange={(e) => setCreator(e.target.value)} />
+        <div className="w-[350px]">
+          <TextInput title="Name" onChange={(e) => setName(e.target.value)} />
+        </div>
+        <div className="w-[350px]">
+          <TextInput title="Artist" onChange={(e) => setCreator(e.target.value)} />
+        </div>
       </div>
-      <div className="w-full">
+      <div className="w-full h-[334px]">
         <TextArea title="Bio" onChange={(e) => setDescription(e.target.value)} />
       </div>
       <div className="flex flex-col md:flex-row py-8">
-        <TextInput title="Copies" onChange={(e) => setCopy(e.target.value)} />
+        <div className="w-[350px]">
+          <TextInput title="Copies" onChange={(e) => setCopy(e.target.value)} />
+        </div>
         <div className="ml-16">
           <Toggle title="Public" checked={isPublic} setValue={setIsPublic} />
         </div>
