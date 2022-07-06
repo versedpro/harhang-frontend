@@ -1,34 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
 import classNames from 'classnames';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
 import styles from './Card.module.css';
+import { CardProps } from './types';
 
-const GeoCard = ({
-  title,
-  region,
-  price,
-  image,
-  currency,
-  like
-}: {
-  title: string;
-  region: string;
-  price: number;
-  image: string;
-  currency: string;
-  like: boolean;
-}) => {
+const GeoCard = ({ variant, title, region, price, image, currency, like }: CardProps) => {
+  const router = useRouter();
+  const [favorite, setFavorite] = useState<boolean>(false);
+
+  const onSell = () => {
+    router.push({
+      pathname: '/sell',
+      query: {
+        variant: variant,
+        title: title,
+        region: region,
+        price: price,
+        image: image,
+        currency: currency,
+        like: favorite
+      }
+    });
+  };
+
   return (
     <div className={classNames([styles.wrapper, styles.wrapperAnime])}>
       <div className={styles.header}>
-        <div className={styles.imageWrapper}>
-          <img src={image} className={styles.image} alt="Geo image" />
+        <div className={styles.imageWrapper} onClick={onSell}>
+          <Image src={image} className={styles.image} layout="fill" alt="Geo image" />
         </div>
         <div className={styles.geoBadgeWrapper}>
-          <div className={classNames([styles.dangerBadge, styles.badgeAnime])}>
-            {like ? <img src="/image/liked.svg" /> : <img src="/image/unliked.svg" />}
+          <div className={classNames([styles.dangerBadge, styles.badgeAnime, 'w-[21px] h-[21px]'])}>
+            {favorite ? (
+              <Image src="/image/liked.svg" layout="fill" onClick={() => setFavorite(!favorite)} />
+            ) : (
+              <Image src="/image/unliked.svg" layout="fill" onClick={() => setFavorite(!favorite)} />
+            )}
           </div>
           <div className={styles.geoCrossBadge}>
-            <img src={`/image/cross.svg`} width={21} />
+            <Image src={`/image/cross.svg`} width={21} height={21} layout="fixed" alt="cross badge" />
           </div>
         </div>
       </div>
@@ -37,7 +48,7 @@ const GeoCard = ({
         <div className={classNames([styles.textTitle, 'ml-2 pt-1'])}>{title}</div>
         <div className={classNames([styles.region, 'ml-2 pt-1'])}>
           <p className={styles.textRegion}>{region}</p>
-          <img src="/image/verified.svg" alt="verify notification" />
+          <Image src="/image/verified.svg" width={18} height={18} layout="fixed" alt="verify notification" />
         </div>
       </div>
     </div>
