@@ -34,7 +34,7 @@ const FormCard = ({ variant, title, region, price, image, currency, like = false
           <Image src={image} className={styles.image} layout="fill" alt="card background" />
         </div>
         <div className={styles.badgeWrapper}>
-          <div className={`${classNames([styles.dangerBadge, styles.badgeAnime])} w-[21px] h-[21px]`}>
+          <div className={`${classNames([styles.dangerBadge, styles.badgeAnime])} relative w-[21px] h-[21px]`}>
             {favorite ? (
               <Image src={Liked} layout="fill" alt="liked" onClick={() => setFavorite(!favorite)} />
             ) : (
