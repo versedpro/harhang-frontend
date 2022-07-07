@@ -15,7 +15,7 @@ const Sell: NextPage = () => {
         <div className="relative mr-3 rounded-2xl w-[333.56px] h-[593px]">
           <Image src={`${image}`} layout="fill" alt="card image" />
         </div>
-        <div className={`relative mr-5 rounded-2xl w-[333.56px] h-[593px] ${styles.detail}`}></div>
+        <div className={`relative mr-5 rounded-2xl w-[333.56px] h-[593px] bg-primary-500 ${styles.detail}`}></div>
       </div>
     </div>
   );
