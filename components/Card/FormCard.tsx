@@ -8,7 +8,8 @@ import Verified from '../../public/image/verified.svg';
 import { useRouter } from 'next/router';
 import { CardProps } from './types';
 
-const FormCard = ({ variant, title, region, price, image, currency, like = false }: CardProps) => {
+const FormCard = (props: CardProps) => {
+  const { variant, title, region, price, image, currency, like = false } = props;
   const router = useRouter();
   const [favorite, setFavorite] = useState<boolean>(like);
 

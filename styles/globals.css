@@ -9,6 +9,8 @@
   :root {
     --background: theme('colors.white');
     --background-secondary: theme('colors.gray.50');
+
+    --foreground: theme('colors.black');
   
     --primary-100: theme('colors.primary.100');
     --primary-200: theme('colors.primary.200');
@@ -49,6 +51,8 @@
   [data-theme='dark'] {
     --background: theme('colors.black');
     --background-secondary: theme('colors.primary.100');
+
+    --foreground: theme('colors.white');
   
     --primary-100: theme('colors.primary.100');
     --primary-200: theme('colors.primary.200');

@@ -67,7 +67,7 @@ const Send: NextPage = () => {
             <div className="my-16 h-[200px]">
               <TextArea title="message" />
             </div>
-            <div className="float-right">
+            <div className="float-right mt-5">
               <Button title="Send" />
             </div>
           </div>

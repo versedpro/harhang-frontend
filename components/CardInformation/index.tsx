@@ -33,7 +33,7 @@ export default function CardInformation({ setStep }: { setStep: any }) {
           <Toggle title="Public" checked={isPublic} setValue={setIsPublic} />
         </div>
       </div>
-      <div className="mb-8 float-right">
+      <div className="mb-8 float-right mt-5">
         <Button title="Create" onClick={setStep} />
       </div>
     </div>
