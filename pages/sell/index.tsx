@@ -11,9 +11,10 @@ import Unliked from '../../public/image/unliked.svg';
 import Share from '../../public/image/share-blue.svg';
 import { Button } from '../../components/Button';
 import { ActivityItem } from '../../components/Activity';
-import { Activities } from '../../data';
+import { Activities, Comments } from '../../data';
 import MainPP from '../../public/image/pp-big.png';
 import TextArea from '../../components/Input/TextArea';
+import { Comment } from '../../components/Comment';
 
 const Sell: NextPage = () => {
   const router = useRouter();
@@ -110,6 +111,11 @@ const Sell: NextPage = () => {
               <Button title="Comment" />
             </div>
           </div>
+        </div>
+        <div className="flex flex-col gap-3 my-6">
+          {Comments.map((comment, index) => (
+            <Comment key={index} avatar={comment.avatar} content={comment.content} />
+          ))}
         </div>
       </div>
     </div>
