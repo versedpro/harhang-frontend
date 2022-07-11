@@ -12,6 +12,8 @@ import Share from '../../public/image/share-blue.svg';
 import { Button } from '../../components/Button';
 import { ActivityItem } from '../../components/Activity';
 import { Activities } from '../../data';
+import MainPP from '../../public/image/pp-big.png';
+import TextArea from '../../components/Input/TextArea';
 
 const Sell: NextPage = () => {
   const router = useRouter();
@@ -20,11 +22,13 @@ const Sell: NextPage = () => {
   const [favorite, setFavorite] = useState<boolean>(like === 'true');
 
   return (
-    <div className="flex mx-auto pt-32 w-full">
-      <div className="flex flex-col md:flex-row mx-6 md:mx-14 w-full justify-center">
-        <div className="relative mr-3 rounded-2xl w-[333.56px] h-[593px]">
+    <div className="flex flex-col justify-center pt-32 mx-6 md:mx-14">
+      <div className="flex flex-col md:flex-row justify-around">
+        {/* Background section */}
+        <div className="relative rounded-2xl w-[333.56px] h-[593px]">
           <Image src={`${image}`} width={333.56} height={593} layout="fixed" alt="card image" />
         </div>
+        {/* Card detail section */}
         <div className={styles.detailBox}>
           <div className="flex flex-row">
             <div className="flex flex-col relative w-[54px] h-[96px] mr-6">
@@ -50,7 +54,8 @@ const Sell: NextPage = () => {
             <Image src={DummyMap} width={281} height={281} layout="fixed" alt="map" />
           </div>
         </div>
-        <div className="flex flex-col w-full">
+        {/* Activies section */}
+        <div className="flex flex-col">
           <div className="flex flex-row justify-between items-center">
             <p className={styles.owners}>
               Owners:<span className="text-primary-400 ml-2">22</span>
@@ -77,8 +82,9 @@ const Sell: NextPage = () => {
             </div>
           </div>
           <div className="w-full my-1 flex flex-col gap-3">
-            {Activities.map((activity) => (
+            {Activities.map((activity, index) => (
               <ActivityItem
+                key={index}
                 variant={activity.variant}
                 from={activity.from}
                 to={activity.to}
@@ -87,6 +93,22 @@ const Sell: NextPage = () => {
                 currency={activity.currency}
               />
             ))}
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-col mt-6 w-full md:w-[688px]">
+        <div className="flex flex-row justify-between gap-6">
+          {/* User comment section */}
+          <div className="relative">
+            <Image src={MainPP} width={100} height={100} layout="fixed" alt="user" />
+          </div>
+          <div className="w-full md:w-[556px]">
+            <div className="h-[93px] mb-3">
+              <TextArea />
+            </div>
+            <div className="float-right">
+              <Button title="Comment" />
+            </div>
           </div>
         </div>
       </div>

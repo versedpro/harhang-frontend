@@ -1,5 +1,5 @@
 .detailBox {
-  @apply relative flex flex-col mr-5 p-6 rounded-2xl w-[333.56px] h-[593px] bg-primary-500;
+  @apply relative flex flex-col p-6 rounded-2xl w-[333.56px] h-[593px] bg-primary-500;
 }
 
 .name {
