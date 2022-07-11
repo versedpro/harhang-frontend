@@ -1,0 +1,32 @@
+.detailBox {
+  @apply relative flex flex-col p-6 rounded-2xl w-[333.56px] h-[593px] bg-primary-500;
+}
+
+.name {
+  @apply flex font-normal items-center text-shades-100 mb-3;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 28px;
+}
+
+.creator {
+ @apply flex items-center font-normal font-semibold text-sm text-shades-100 mb-3;
+}
+
+.region {
+  @apply text-shades-100 font-medium font-normal;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.owners {
+  @apply font-normal font-bold text-shades-0;
+  font-size: 27px;
+  line-height: 34px;
+}
+
+.price {
+  @apply flex font-normal font-bold text-shades-0 mr-3;
+  font-size: 47px;
+  line-height: 59px;;
+}

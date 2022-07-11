@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Menu, Transition } from '@headlessui/react';
 import { MediaRenderer, useActiveListings, useMarketplace } from '@thirdweb-dev/react';
 import { useRouter } from 'next/router';
-import cards from '../../data/cards';
+import { cards } from '../../data';
 import Container from '../../components/Container';
 import { IconContext } from 'react-icons/lib';
 import { TbChevronDown } from 'react-icons/tb';

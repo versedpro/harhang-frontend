@@ -58,6 +58,8 @@ module.exports = {
           450: '#1F2B3F',
           500: '#102A53',
         },
+        'background': 'var(--background)',
+        'foreground': 'var(--foreground)',
         'primary-100': 'var(--primary-100)',
         'primary-200': 'var(--primary-200)',
         'primary-300': 'var(--primary-300)',

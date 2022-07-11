@@ -58,7 +58,7 @@ const Create: NextPage = () => {
             {/* Map section */}
             <div className={styles.title}>Choose a location</div>
             <BingMapsReact setPlace={setPlace} />
-            <div className="flex justify-end">
+            <div className="flex justify-end mt-5">
               <Button title="Locate" onClick={onHandleLocate} />
             </div>
           </>
