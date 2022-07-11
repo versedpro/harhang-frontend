@@ -10,6 +10,8 @@ import Liked from '../../public/image/liked.svg';
 import Unliked from '../../public/image/unliked.svg';
 import Share from '../../public/image/share-blue.svg';
 import { Button } from '../../components/Button';
+import { ActivityItem } from '../../components/Activity';
+import { Activities } from '../../data';
 
 const Sell: NextPage = () => {
   const router = useRouter();
@@ -55,7 +57,7 @@ const Sell: NextPage = () => {
             </p>
             <p className={styles.owners}>Ends in 16 days</p>
           </div>
-          <div className="flex flex-row justify-between items-center my-6">
+          <div className="flex flex-row justify-between items-center my-3">
             <div className="flex items-center">
               <p className={styles.price}>500</p>
               <Image src={`/image/token/${currency}.svg`} width={50} height={50} layout="fixed" alt="token" />
@@ -73,6 +75,18 @@ const Sell: NextPage = () => {
               />
               <Image src={Share} className="cursor-pointer" width={47.4} height={52.46} layout="fixed" alt="share" />
             </div>
+          </div>
+          <div className="w-full my-1 flex flex-col gap-3">
+            {Activities.map((activity) => (
+              <ActivityItem
+                variant={activity.variant}
+                from={activity.from}
+                to={activity.to}
+                time={activity.time}
+                price={activity.price}
+                currency={activity.currency}
+              />
+            ))}
           </div>
         </div>
       </div>
