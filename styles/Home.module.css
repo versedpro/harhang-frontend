@@ -1,9 +1,5 @@
 .header {
-  @apply md:w-full flex flex-col md:flex-row items-center justify-between;
-  width: 100%;
-  background-color: #FFFFFF;
-  position: fixed;
-  height: 88px;
+  @apply container mx-auto flex items-center h-[88px];
   z-index: 9999;
 }
 
@@ -319,9 +315,7 @@
 }
 
 .footer {
-  @apply w-full flex items-center mt-12;
-  background-color: #1D4E7A;
-  height: 160px;
+  @apply w-full flex items-center mt-12 md:h-[160px] container mx-auto;
 }
 
 .footerContent {
@@ -368,5 +362,5 @@
 }
 
 .footerSocials {
-  @apply flex flex-row justify-between;
+  @apply flex flex-row justify-between gap-6;
 }

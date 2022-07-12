@@ -17,7 +17,7 @@ const Home: NextPage = () => {
   const { data: listings, isLoading: loadingListings } = useActiveListings(marketplace);
 
   return (
-    <>
+    <div className="container mx-auto">
       {/* Content */}
       <div className="mx-6">
         {/* Follow section */}
@@ -77,7 +77,7 @@ const Home: NextPage = () => {
           <Container items={cards} />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
