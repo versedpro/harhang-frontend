@@ -51,53 +51,55 @@ const Create: NextPage = () => {
   };
 
   return (
-    <div className="mx-6">
-      <div className="mx-auto pt-40 w-full">
-        {step === 1 ? (
-          <>
-            {/* Map section */}
-            <div className={styles.title}>Choose a location</div>
-            <BingMapsReact setPlace={setPlace} />
-            <div className="flex justify-end mt-5">
-              <Button title="Locate" onClick={onHandleLocate} />
-            </div>
-          </>
-        ) : step === 2 ? (
-          <>
-            <div className={styles.title}>Upload your image</div>
-            <ImageUpload setCard={setCard} card={card} isUploaded={onHandleUpload} />
-          </>
-        ) : step === 3 ? (
-          <>
-            <div className={styles.title}>Fill the information</div>
-            <CardInformation setStep={onHandleSubmit} />
-          </>
-        ) : step === 4 ? (
-          <>
-            <div className={styles.title}>Creating your Card</div>
-            <CreatingProcess setStep={onHandleCreate} />
-          </>
-        ) : (
-          <>
-            <div className={styles.title}>Card created!</div>
-            <div className="flex justify-center">
-              <div className="flex flex-col">
-                <Image src={DummyBackground} width="461.25" height="752" layout="fixed" />
-                <div className="flex flex-row items-center mt-6">
-                  <div className={styles.subtitle}>Copy link:</div>
-                  <Clipboard text="https://harfang.io/card/0x2666659">
-                    <div className={styles.link}>https://harfang.io/card/0x2666659</div>
-                  </Clipboard>
-                  <IconContext.Provider value={{ color: '#1D9BF0', size: '44px' }}>
-                    <Link href={`https://www.twitter.com/`}>
-                      <FaTwitterSquare />
-                    </Link>
-                  </IconContext.Provider>
+    <div className="container mx-auto">
+      <div className="mx-6">
+        <div className="mx-auto pt-40 w-full">
+          {step === 1 ? (
+            <>
+              {/* Map section */}
+              <div className={styles.title}>Choose a location</div>
+              <BingMapsReact setPlace={setPlace} />
+              <div className="flex justify-end mt-5">
+                <Button title="Locate" onClick={onHandleLocate} />
+              </div>
+            </>
+          ) : step === 2 ? (
+            <>
+              <div className={styles.title}>Upload your image</div>
+              <ImageUpload setCard={setCard} card={card} isUploaded={onHandleUpload} />
+            </>
+          ) : step === 3 ? (
+            <>
+              <div className={styles.title}>Fill the information</div>
+              <CardInformation setStep={onHandleSubmit} />
+            </>
+          ) : step === 4 ? (
+            <>
+              <div className={styles.title}>Creating your Card</div>
+              <CreatingProcess setStep={onHandleCreate} />
+            </>
+          ) : (
+            <>
+              <div className={styles.title}>Card created!</div>
+              <div className="flex justify-center">
+                <div className="flex flex-col">
+                  <Image src={DummyBackground} width="461.25" height="752" layout="fixed" />
+                  <div className="flex flex-row items-center mt-6">
+                    <div className={styles.subtitle}>Copy link:</div>
+                    <Clipboard text="https://harfang.io/card/0x2666659">
+                      <div className={styles.link}>https://harfang.io/card/0x2666659</div>
+                    </Clipboard>
+                    <IconContext.Provider value={{ color: '#1D9BF0', size: '44px' }}>
+                      <Link href={`https://www.twitter.com/`}>
+                        <FaTwitterSquare />
+                      </Link>
+                    </IconContext.Provider>
+                  </div>
                 </div>
               </div>
-            </div>
-          </>
-        )}
+            </>
+          )}
+        </div>
       </div>
     </div>
   );
