@@ -13,23 +13,25 @@ export default function Header() {
   const disconnectWallet = useDisconnect();
 
   return (
-    <div className="container mx-auto">
-      <nav className={styles.header}>
-        <div className="flex flex-col md:flex-row w-full mx-6 justify-between items-center">
-          <div className={styles.left}>
-            <div className={styles.logo}>
-              <Link href="/" passHref role="button">
-                <img src={`/logo.png`} alt="Harfang Logo" width={58.91} style={{ cursor: 'pointer' }} />
-              </Link>
+    <div className="bg-background fixed w-full z-[99]">
+      <div className="w-full flex items-center md:h-[88px] container mx-auto">
+        <div className={styles.header}>
+          <div className="flex flex-col md:flex-row w-full mx-6 justify-between items-center">
+            <div className={styles.left}>
+              <div className={styles.logo}>
+                <Link href="/" passHref role="button">
+                  <img src={`/logo.png`} alt="Harfang Logo" width={58.91} style={{ cursor: 'pointer' }} />
+                </Link>
+              </div>
+              <SearchBar />
             </div>
-            <SearchBar />
-          </div>
-          <div className={styles.right}>
-            <NavigateBar />
-            <UserMenu />
+            <div className={styles.right}>
+              <NavigateBar />
+              <UserMenu />
+            </div>
           </div>
         </div>
-      </nav>
+      </div>
     </div>
   );
 }

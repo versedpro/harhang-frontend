@@ -1,5 +1,9 @@
-import styles from '../styles/Home.module.css';
 import React from 'react';
+import Image from 'next/image';
+import styles from '../styles/Home.module.css';
+import Instagram from '../public/image/instagram-white.svg';
+import Discord from '../public/image/discord-white.svg';
+import Twitter from '../public/image/twitter-white.svg';
 
 export default function Footer() {
   return (
@@ -18,18 +22,18 @@ export default function Footer() {
             </div>
           </div>
           <div className={styles.footerSocials}>
-            <img
-              src="/image/instagram.svg"
+            <Image
+              src={Instagram}
               className="w-4 cursor-pointer"
               onClick={() => window.open('https://www.instagram.com', '_blank')}
             />
-            <img
-              src="/image/discord.svg"
+            <Image
+              src={Discord}
               className="w-4 cursor-pointer mx-6"
               onClick={() => window.open('https://www.discord.com/channels/989199518329364551', '_blank')}
             />
-            <img
-              src="/image/twitter.svg"
+            <Image
+              src={Twitter}
               className="w-4 cursor-pointer"
               onClick={() => window.open('https://www.twitter.com', '_blank')}
             />
