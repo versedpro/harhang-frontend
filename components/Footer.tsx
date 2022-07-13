@@ -7,7 +7,7 @@ import Twitter from '../public/image/twitter-white.svg';
 
 export default function Footer() {
   return (
-    <div className="bg-primary-500">
+    <div className="bg-primary-500" style={{ background: '#1D4E7A' }}>
       <div className={styles.footer}>
         <div className="mx-6 w-full justify-between flex flex-row">
           <div className={styles.footerBrand}>Harfang</div>
