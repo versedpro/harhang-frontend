@@ -1,20 +1,11 @@
 .input {
-  @apply w-full h-[44px] p-3 text-base font-normal transition ease-in-out m-0 focus:outline-none;
-  background: #CBEBFF;
-  border-radius: 10px;
-  border: none;
+  @apply w-full h-[44px] p-3 text-base font-normal transition ease-in-out m-0 focus:outline-none bg-primary-100 border-none rounded-[10px] text-shades-0;
 }
 
 .inputTitle {
-  @apply font-normal mr-2;
-  font-size: 27px;
-  font-weight: 700;
-  line-height: 34px;
+  @apply mr-2 text-[27px] leading-[34px] font-bold;
 }
 
 .textArea {
-  @apply w-full h-[200px] md:h-full p-3 font-normal transition ease-in-out focus:outline-none;
-  background: #CBEBFF;
-  border-radius: 10px;
-  border:none;
+  @apply w-full h-[200px] md:h-full p-3 font-normal transition ease-in-out focus:outline-none bg-primary-100 border-none rounded-[10px];
 }

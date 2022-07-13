@@ -51,13 +51,13 @@ const Profile: NextPage = () => {
             </p>
             {/* Edit and Setting buttons */}
             <div className="flex flex-row gap-[10px]">
-              <Link href="/edit_profile">
-                <div className="relative">
+              <Link href="/profileedit">
+                <div className="relative cursor-pointer">
                   <Image src={ProfileEdit} width={32} height={32} layout="fixed" alt="Edit button" />
                 </div>
               </Link>
               <Link href="/setting">
-                <div className="relative">
+                <div className="relative cursor-pointer">
                   <Image src={ProfileSetting} width={32} height={32} layout="fixed" alt="Setting button" />
                 </div>
               </Link>
