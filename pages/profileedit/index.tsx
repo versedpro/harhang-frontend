@@ -1,8 +1,6 @@
 import type { NextPage } from 'next';
-import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { SettingMenu } from '../../components/SettingMenu';
 import UserDetail from '../../components/UserDetail';
 import UserSocials from '../../components/UserSocials';
 import { MdUndo } from 'react-icons/md';
@@ -18,13 +16,47 @@ import ProfilePicture from '../../public/image/pp.png';
 import UploadPicture from '../../public/image/upload-circle.svg';
 import BannerBg from '../../public/image/profile-bg.png';
 import UploadBanner from '../../public/image/upload-banner.png';
+import { useState } from 'react';
 
 const ProfileEdition: NextPage = () => {
   const router = useRouter();
+  const [avatar, setAvatar] = useState();
+  const [banner, setBanner] = useState();
+
+  const onChangeAvatar = (e: any) => {
+    e.preventDefault();
+    console.log('file picture');
+    let files;
+    if (e.dataTransfer) {
+      files = e.dataTransfer.files;
+    } else if (e.target) {
+      files = e.target.files;
+    }
+    const reader = new FileReader();
+    reader.onload = () => {
+      setAvatar(reader.result as any);
+    };
+    reader.readAsDataURL(files[0]);
+  };
+
+  const onChangeBanner = (e: any) => {
+    e.preventDefault();
+    let files;
+    if (e.dataTransfer) {
+      files = e.dataTransfer.files;
+    } else if (e.target) {
+      files = e.target.files;
+    }
+    const reader = new FileReader();
+    reader.onload = () => {
+      setBanner(reader.result as any);
+    };
+    reader.readAsDataURL(files[0]);
+  };
 
   return (
     <div className="container mx-auto">
-      <div className="relative left-[26px] top-[88px] cursor-pointer z-[10]" onClick={() => router.back()}>
+      <div className="relative ml-[26px] top-[88px] cursor-pointer z-[10]" onClick={() => router.back()}>
         <MdUndo className="text-shades-0" size={64} />
       </div>
       <div className="flex flex-col md:flex-row gap-[10px] pt-[152px] pb-[64px] isolate">
@@ -116,22 +148,36 @@ const ProfileEdition: NextPage = () => {
           {/* Profile picture */}
           <div className="flex flex-row py-6 gap-6 items-center">
             <p className="font-medium text-[27px] leading-[34px] text-shades-0">Profile Picture:</p>
-            <div className="relative">
-              <Image src={ProfilePicture} width={100} height={100} layout="fixed" alt="current avatar" />
+            <div className="relative w-[100px] h-[100px]">
+              {!avatar ? (
+                <Image src={ProfilePicture} layout="fixed" alt="current avatar" />
+              ) : (
+                <Image className="rounded-full object-cover" src={avatar} layout="fill" alt="updated avatar" />
+              )}
             </div>
             <div className="relative">
-              <Image src={UploadPicture} width={100} height={100} layout="fixed" alt="upload" />
+              <label htmlFor="avatar" className="cursor-pointer">
+                <Image src={UploadPicture} width={100} height={100} layout="fixed" alt="upload" />
+              </label>
+              <input type="file" name="avatar" id="avatar" className="hidden" onChange={onChangeAvatar} />
             </div>
           </div>
           {/* Profile Banner */}
           <div className="flex flex-col md:flex-row items-center py-6 pr-16 gap-6 w-full">
             <p className="font-medium text-[27px] leading-[34px] text-shades-0">Banner:</p>
             <div className="flex flex-col gap-3">
-              <div className="relative">
-                <Image src={BannerBg} width={872} height={212.03} layout="fixed" alt="current banner" />
+              <div className="relative w-[872px] h-[212px]">
+                {!banner ? (
+                  <Image src={BannerBg} className="object-cover" layout="fill" alt="current banner" />
+                ) : (
+                  <Image src={banner} className="object-cover" layout="fill" alt="uploaded banner" />
+                )}
               </div>
               <div className="relative">
-                <Image src={UploadBanner} width={872} height={212} layout="fixed" alt="upload banner" />
+                <label htmlFor="banner" className="cursor-pointer">
+                  <Image src={UploadBanner} width={872} height={212} layout="fixed" alt="upload banner" />
+                </label>
+                <input type="file" name="banner" id="banner" className="hidden" onChange={onChangeBanner} />
               </div>
             </div>
           </div>
