@@ -13,34 +13,34 @@ export default function UserSocials() {
       <div className="flex flex-col gap-[10px]">
         <div className="flex flex-row gap-[10px]">
           <Link href={`https://www.twitter.com/`}>
-            <div className="relative">
+            <div className="relative cursor-pointer">
               <Image src={Twitter} width={30} height={30} layout="fixed" alt="twitter" />
             </div>
           </Link>
           <Link href={`https://www.instagram.com/`}>
-            <div className="relative">
+            <div className="relative cursor-pointer">
               <Image src={Instagram} width={30} height={30} layout="fixed" alt="twitter" />
             </div>
           </Link>
           <Link href={`https://www.discord.com/`}>
-            <div className="relative">
+            <div className="relative cursor-pointer">
               <Image src={Discord} width={30} height={30} layout="fixed" alt="twitter" />
             </div>
           </Link>
         </div>
         <div className="flex flex-row gap-[10px]">
           <Link href={`https://www.pinterest.com/`}>
-            <div className="relative">
+            <div className="relative cursor-pointer">
               <Image src={Pinterest} width={30} height={30} layout="fixed" alt="twitter" />
             </div>
           </Link>
           <Link href={`https://www.dribble.com/`}>
-            <div className="relative">
+            <div className="relative cursor-pointer">
               <Image src={Dribble} width={30} height={30} layout="fixed" alt="twitter" />
             </div>
           </Link>
           <Link href={`https://www.behance.com/`}>
-            <div className="relative">
+            <div className="relative cursor-pointer">
               <Image src={Behance} width={30} height={30} layout="fixed" alt="twitter" />
             </div>
           </Link>
