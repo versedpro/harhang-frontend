@@ -3,8 +3,7 @@
 }
 
 .searchBar input {
-  @apply w-56 md:w-[570.09px] h-[44px] bg-primary-500 border-none rounded-[12px] font-semibold text-[16px] leading-[20px] text-background;
-  outline: 0ch;
+  @apply w-56 md:w-[570.09px] h-[44px] bg-primary-500 border-none rounded-[12px] font-semibold text-[16px] leading-[20px] text-background outline-0;
 }
 
 .searchBar input::placeholder {

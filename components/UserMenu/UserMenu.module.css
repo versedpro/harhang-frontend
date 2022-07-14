@@ -7,25 +7,7 @@
 }
 
 .notificationPanel {
-  /* Auto layout */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 24px 16px;
-  gap: 10px;
-
-  position: absolute;
-  width: 433.67px;
-  height: 458px;
-
-  background: #FFFFFF;
-  border-radius: 12px;
-
-  /* Inside auto layout */
-  flex: none;
-  order: 2;
-  flex-grow: 0;
-  z-index: 2;
+  @apply flex flex-col px-6 py-4 gap-[10px] absolute w-[433.67px] h-[458px] bg-background rounded-[12px];
 }
 
 .message {

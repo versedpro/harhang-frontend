@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import styles from './CardInfos.module.css';
 import TextInput from '../Input/TextInput';
 import TextArea from '../Input/TextArea';
 import Toggle from '../Input/Toggle';
