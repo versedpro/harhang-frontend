@@ -1,10 +1,12 @@
 import { useAddress, useMetamask, useDisconnect } from '@thirdweb-dev/react';
 import Link from 'next/link';
 import React from 'react';
+import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import SearchBar from './Search';
 import NavigateBar from './Navigate';
 import UserMenu from './UserMenu';
+import Logo from '../public/logo.png';
 
 export default function Header() {
   // Helpful thirdweb hooks to connect and manage the wallet from metamask.
@@ -20,7 +22,9 @@ export default function Header() {
             <div className={styles.left}>
               <div className={styles.logo}>
                 <Link href="/" passHref role="button">
-                  <img src={`/logo.png`} alt="Harfang Logo" width={58.91} style={{ cursor: 'pointer' }} />
+                  <div className="relative w-[58.91px] h-[64px] cursor-pointer">
+                    <Image src={Logo} layout="fill" alt="logo" />
+                  </div>
                 </Link>
               </div>
               <SearchBar />

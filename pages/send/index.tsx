@@ -58,7 +58,7 @@ const Send: NextPage = () => {
       <div className="mx-auto pt-40 w-full">
         <div className="flex flex-col md:flex-row justify-center">
           <div className="mr-20">
-            <Image src={ImgUpload} width={312} height={562.77} layout="fixed" />
+            <Image src={ImgUpload} width={312} height={562.77} layout="fixed" alt="upload" />
           </div>
           <div className="md:w-[600px]">
             <div>

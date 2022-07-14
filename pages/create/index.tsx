@@ -83,7 +83,7 @@ const Create: NextPage = () => {
               <div className={styles.title}>Card created!</div>
               <div className="flex justify-center">
                 <div className="flex flex-col">
-                  <Image src={DummyBackground} width="461.25" height="752" layout="fixed" />
+                  <Image src={DummyBackground} width="461.25" height="752" layout="fixed" alt="background" />
                   <div className="flex flex-row items-center mt-6">
                     <div className={styles.subtitle}>Copy link:</div>
                     <Clipboard text="https://harfang.io/card/0x2666659">

@@ -23,7 +23,7 @@ export default function Map({ setPlace }: { setPlace: any }) {
           ]);
         });
     }, 500);
-  }, []);
+  }, [setPlace]);
 
   // console.log(window.Microsoft);
 

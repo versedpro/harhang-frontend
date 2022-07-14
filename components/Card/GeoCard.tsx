@@ -33,9 +33,9 @@ const GeoCard = ({ variant, title, region, price, image, currency, like }: CardP
         <div className={styles.geoBadgeWrapper}>
           <div className={classNames([styles.dangerBadge, styles.badgeAnime, 'relative w-[21px] h-[21px]'])}>
             {favorite ? (
-              <Image src="/image/liked.svg" layout="fill" onClick={() => setFavorite(!favorite)} />
+              <Image src="/image/liked.svg" layout="fill" onClick={() => setFavorite(!favorite)} alt="liked" />
             ) : (
-              <Image src="/image/unliked.svg" layout="fill" onClick={() => setFavorite(!favorite)} />
+              <Image src="/image/unliked.svg" layout="fill" onClick={() => setFavorite(!favorite)} alt="unliked" />
             )}
           </div>
           <div className={styles.geoCrossBadge}>

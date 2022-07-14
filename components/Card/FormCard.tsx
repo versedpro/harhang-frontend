@@ -44,7 +44,7 @@ const FormCard = (props: CardProps) => {
           </div>
           <div className={styles.primaryBadge}>
             <span className={styles.counter}>{price}</span>
-            <Image src={`/image/token/${currency}.svg`} width={18} height={18} layout="fixed" />
+            <Image src={`/image/token/${currency}.svg`} width={18} height={18} layout="fixed" alt="coin" />
           </div>
         </div>
       </div>

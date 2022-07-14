@@ -48,7 +48,7 @@ export function CreatingProcess({ setStep }: any) {
 
   useEffect(() => {
     if (harfangInfo && harfangInfo.result) setStep();
-  }, [harfangInfo]);
+  }, [harfangInfo, setStep]);
 
   const ipfsState: CreatingCardStates = useMemo(() => {
     return ipfsInfo && ipfsInfo.result ? CreatingCardStates.SUCCESS : CreatingCardStates.FAILED;

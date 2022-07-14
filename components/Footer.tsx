@@ -26,16 +26,19 @@ export default function Footer() {
               src={Instagram}
               className="w-4 cursor-pointer"
               onClick={() => window.open('https://www.instagram.com', '_blank')}
+              alt="Instagram"
             />
             <Image
               src={Discord}
               className="w-4 cursor-pointer mx-6"
               onClick={() => window.open('https://www.discord.com/channels/989199518329364551', '_blank')}
+              alt="Discord"
             />
             <Image
               src={Twitter}
               className="w-4 cursor-pointer"
               onClick={() => window.open('https://www.twitter.com', '_blank')}
+              alt="Twitter"
             />
           </div>
         </div>

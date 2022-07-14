@@ -41,7 +41,7 @@ const Sell: NextPage = () => {
                 <p className={styles.name}>{title}</p>
                 <p className={styles.creator}>
                   Creator: <span className="flex items-center text-secondary-400 ml-2 mr-1">username</span>
-                  <Image src={Verified} width={18} height={18} layout="fixed" />
+                  <Image src={Verified} width={18} height={18} layout="fixed" alt="verified badge" />
                 </p>
                 <p className={styles.creator}>Created: 12 dec 2021</p>
               </div>

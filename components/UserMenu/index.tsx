@@ -1,9 +1,14 @@
 import { Menu, Transition } from '@headlessui/react';
 import { Fragment, useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 import styles from './UserMenu.module.css';
 import { useAddress, useMetamask, useDisconnect } from '@thirdweb-dev/react';
 import { IconContext } from 'react-icons/lib';
 import { TbWallet } from 'react-icons/tb';
+import Notificaiton from '../../public/image/notifications.svg';
+import Dot from '../../public/image/dot.png';
+import PeopleOne from '../../public/image/pp-1.png';
+import PeopleMain from '../../public/image/pp.png';
 
 export default function UserMenu() {
   const address = useAddress();
@@ -15,11 +20,13 @@ export default function UserMenu() {
       <Menu as="div" className="relative inline-block text-left">
         <div>
           <Menu.Button>
-            <img
+            <Image
               className={styles.notification}
-              src="/image/notifications.svg"
+              src={Notificaiton}
+              width={48}
+              height={48}
+              layout="fixed"
               alt="notifications"
-              style={{ cursor: 'pointer' }}
             />
           </Menu.Button>
         </div>
@@ -39,10 +46,10 @@ export default function UserMenu() {
                   <button
                     className={`${
                       active ? 'bg-violet-500 text-white' : 'text-gray-900'
-                    } group flex w-full items-center rounded-md px-2 py-2`}
+                    } group flex gap-2 w-full items-center rounded-md px-2 py-2`}
                   >
-                    <img src="/image/dot.png" alt="unread" width={9} className="mr-2" />
-                    <img src="/image/pp-1.png" alt="user" className="mr-4" />
+                    <Image src={Dot} width={9} height={9} layout="fixed" alt="dot" />
+                    <Image src={PeopleOne} width={50} height={50} layout="fixed" alt="user" />
                     <p className={styles.message}>user.lens</p>&nbsp;
                     <p>follwed you!</p>
                   </button>
@@ -60,15 +67,14 @@ export default function UserMenu() {
         //   <p style={{ marginLeft: 8, marginRight: 8, color: 'grey' }}>|</p>
         //   <p>{address.slice(0, 6).concat('...').concat(address.slice(-4))}</p>
         // </>
-        <div className={styles.profile}>
-          <img src="/image/pp.png" alt="user" onClick={() => disconnectWallet()} />
+        <div className="cursor-pointer" onClick={() => disconnectWallet()}>
+          <Image src={PeopleMain} width={64} height={64} layout="fixed" alt="profile" />
         </div>
       ) : (
-        <div className={styles.profileUnconnected}>
+        <div className="border-2 border-solid rounded-full border-primary-400 p-[10px] w-16 h-16">
           <IconContext.Provider value={{ color: '#317EF7', className: 'w-10 h-10' }}>
             <TbWallet onClick={() => connectWithMetamask()} />
           </IconContext.Provider>
-          {/* <img src="/image/pp.png" alt="user" onClick={() => connectWithMetamask()} /> */}
         </div>
       )}
     </div>
