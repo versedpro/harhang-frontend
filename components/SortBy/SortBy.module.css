@@ -1,0 +1,7 @@
+.sortButton {
+  @apply flex flex-row w-full justify-center items-center bg-opacity-20 text-shades-100 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 py-[10px] px-[47px] gap-[20px] w-[330px] h-[44px] bg-primary-400 rounded-t-[5px] text-[19px] leading-[24px] font-bold;
+}
+
+.sortItems {
+  @apply absolute left-0 w-full origin-top-right rounded-t-none rounded-b-md bg-primary-400 focus:outline-none z-50;
+}
