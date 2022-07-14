@@ -22,16 +22,16 @@ const Settings: NextPage = () => {
               <SettingMenu title="Edit Profile" />
             </a>
           </Link>
-          <a target="_blank" href="https://notion.com">
+          <a target="_blank" href="https://notion.com" rel="noreferrer">
             <SettingMenu title="Request Verification" />
           </a>
-          <a target="_blank" href="https://notion.com">
+          <a target="_blank" href="https://notion.com" rel="noreferrer">
             <SettingMenu title="CGU" />
           </a>
-          <a target="_blank" href="https://notion.com">
+          <a target="_blank" href="https://notion.com" rel="noreferrer">
             <SettingMenu title="Privacy Policy" />
           </a>
-          <a target="_blank" href="https://notion.com">
+          <a target="_blank" href="https://notion.com" rel="noreferrer">
             <SettingMenu title="Documentation" />
           </a>
         </div>

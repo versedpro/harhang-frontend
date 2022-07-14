@@ -1,38 +1,7 @@
 .bar {
-  /* Auto layout */
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 10px;
-
-  width: 280px;
-  height: 48px;
-
-  /* Inside auto layout */
-  flex: none;
-  order: 0;
-  flex-grow: 0;
+  @apply flex flex-row gap-[10px] w-[280px] h-[48px];
 }
 
 .iconBox {
-  /* Auto layout */
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  gap: 10px;
-
-  width: 48px;
-  height: 48px;
-
-  /* Primary/Primary 500 */
-  background: #1D4E7A;
-  border-radius: 10px;
-
-  /* Inside auto layout */
-  flex: none;
-  order: 0;
-  flex-grow: 0;
+  @apply flex flex-row justify-center items-center p-[10px] gap-[10px] w-[48px] h-[48px] bg-primary-500 rounded-[10px] cursor-pointer;
 }

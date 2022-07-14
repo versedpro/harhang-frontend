@@ -31,7 +31,9 @@ export default function ActivityItem(props: ActivityItemProps) {
       <div className="flex flex-row">
         {price ? <p className="text-sm text-shades-0 font-normal mr-1">{price}</p> : null}
         {/* currency */}
-        {currency ? <Image src={`/image/token/${currency}.svg`} width={18} height={18} layout="fixed" /> : null}
+        {currency ? (
+          <Image src={`/image/token/${currency}.svg`} width={18} height={18} layout="fixed" alt="coin" />
+        ) : null}
       </div>
       {/* from */}
       {from && from.length === 42 ? (

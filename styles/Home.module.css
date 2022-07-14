@@ -38,18 +38,11 @@
 }
 
 .linkTitle {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 57px;
-  line-height: 71px;
-  color: #002053;
+  @apply font-bold text-[57px] leading-[71px] text-shades-0;
 }
 
 .extraLink {
-  @apply ml-4;
-  width: 33px;
-  height: 33px;
-  color: #002053;
+  @apply ml-4 text-shades-0;
 }
 
 .secondaryButton {

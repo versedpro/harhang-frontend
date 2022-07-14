@@ -1,10 +1,13 @@
 import type { NextPage } from 'next';
 import { MediaRenderer, useActiveListings, useMarketplace } from '@thirdweb-dev/react';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 import { cards } from '../../data';
 import Container from '../../components/Container';
 import SortBy from '../../components/SortBy/SortBy';
 import { useState } from 'react';
+import CardsFilter from '../../public/image/cards-button.png';
+import StampsFilter from '../../public/image/stamps-button.png';
 
 const Collection: NextPage = () => {
   const router = useRouter();
@@ -27,9 +30,16 @@ const Collection: NextPage = () => {
         <div className="pt-40">
           <div className="flex flex-col justify-between md:flex-row">
             <SortBy onChange={onSelect} />
-            <div className="flex flex-row items-center">
-              <img src="/image/cards-button.png" style={{ cursor: 'pointer' }} />
-              <img src="/image/stamps-button.png" className="ml-8" style={{ cursor: 'pointer' }} />
+            <div className="flex flex-row items-center gap-8">
+              <Image src={CardsFilter} className="cursor-pointer" width={171} height={44} layout="fixed" alt="filter" />
+              <Image
+                src={StampsFilter}
+                className="cursor-pointer"
+                width={171}
+                height={44}
+                layout="fixed"
+                alt="filter"
+              />
             </div>
           </div>
           <Container items={cards} />

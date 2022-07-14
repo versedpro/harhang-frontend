@@ -33,17 +33,17 @@ export default function SearchBar() {
     }
   }, []);
 
-  const onFocus = useCallback(() => {
-    setActive(true);
-    window.addEventListener('click', onClick);
-  }, []);
-
   const onClick = useCallback((event: any) => {
     if (searchRef.current && !searchRef.current.contains(event.target)) {
       setActive(false);
       window.removeEventListener('click', onClick);
     }
   }, []);
+
+  const onFocus = useCallback(() => {
+    setActive(true);
+    window.addEventListener('click', onClick);
+  }, [onClick]);
 
   return (
     <div className={`${styles.searchBar} ${active && results.length && 'relative top-[64px]'}`} ref={searchRef}>
