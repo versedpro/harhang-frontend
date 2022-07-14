@@ -1,6 +1,6 @@
 /* For single card component */
 .wrapper {
-  @apply bg-white hover:shadow-none cursor-pointer flex flex-col items-center justify-center;
+  @apply hover:shadow-none cursor-pointer flex flex-col items-center justify-center;
 }
 
 .wrapperAnime {

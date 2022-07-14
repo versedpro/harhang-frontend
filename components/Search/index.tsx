@@ -76,7 +76,7 @@ export default function SearchBar() {
               ) : result.type === 'address' ? (
                 <Image src={Address} width={19} height={14} layout="fixed" alt="address" />
               ) : null}
-              <p className="text-shades-100 text-[16px] leading-[16px] font-bold ">{result.content}</p>
+              <p className="text-background text-[16px] leading-[16px] font-bold ">{result.content}</p>
             </div>
           ))}
         </div>
