@@ -25,37 +25,19 @@
 }
 
 .textTitle {
-  @apply text-ellipsis w-[140px] overflow-hidden font-normal items-center;
-  font-weight: 500;
-  font-size: 19px;
-  line-height: 24px;
-
-  /* Shades/Black */
-  color: #002053;
-
-  white-space: nowrap;
+  @apply text-ellipsis w-[140px] overflow-hidden items-center font-medium text-[19px] leading-[24px] text-shades-0 whitespace-nowrap;
 }
 
 .region {
   @apply relative flex flex-row items-center w-[140px];
-  width: 140px;
 }
 
 .textRegion {
-  @apply flex text-ellipsis overflow-hidden items-center font-normal;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 20px;
-
-  /* Shades/Black */
-  color: #002053;
-
-  white-space: nowrap;
+  @apply flex text-ellipsis overflow-hidden items-center font-light text-[16px] leading-[20px] text-shades-0 whitespace-nowrap;
 }
 
 .badgeWrapper {
-  @apply absolute bottom-0 left-0 mb-2 ml-2 mr-2 flex flex-row justify-between;
-  width: 88%;
+  @apply absolute bottom-0 left-0 mb-2 ml-2 mr-2 flex flex-row justify-between w-[88%];
 }
 
 .dangerBadge {
@@ -63,14 +45,7 @@
 }
 
 .primaryBadge {
-  @apply relative flex flex-row justify-center items-center px-[5px] py-[2px] font-normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 15px;
-  color: #4486EA;
-
-  background: #FFFFFF;
-  border-radius: 3px;
+  @apply relative flex flex-row justify-center items-center px-[5px] py-[2px] font-medium text-[12px] leading-[15px] text-primary-500 bg-background rounded-[3px];
 }
 
 .badgeAnime {
@@ -78,8 +53,7 @@
 }
 
 .geoBadgeWrapper {
-  @apply absolute top-0 left-0 mt-2 ml-2 mr-2 flex flex-row justify-between;
-  width: 88%;
+  @apply absolute top-0 left-0 mt-2 ml-2 mr-2 flex flex-row justify-between w-[88%];
 }
 
 .geoCrossBadge {

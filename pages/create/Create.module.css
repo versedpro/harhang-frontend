@@ -1,23 +1,11 @@
 .title {
-  @apply items-center flex justify-center mb-[21px];
-  font-style: normal;
-  font-size: 47px;
-  font-weight: 700;
-  line-height: 59px;
-  color: #102A53;
+  @apply items-center flex justify-center mb-[21px] font-bold text-[47px] leading-[59px] text-shades-0;
 }
 
 .subtitle {
-  @apply items-center font-normal mr-6;
-  font-size: 27px;
-  font-weight: 500;
-  line-height: 34px;
-  color: #102A53;
+  @apply items-center font-normal mr-6 font-medium text-[27px] leading-[34px] text-shades-0;
 }
 
 .link {
-  @apply p-3 mr-6;
-  border-radius: 10px;
-  background: #CBEBFF;
-  color: #317ef7;
+  @apply p-3 mr-6 rounded-[10px] bg-primary-100 text-primary-400;
 }

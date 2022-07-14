@@ -1,7 +1,6 @@
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from './Profile.module.css';
 import ProfileBanner from '../../public/image/profile-bg.png';
 import Avatar from '../../public/image/pp.png';
 import Verified from '../../public/image/verified.svg';
@@ -42,11 +41,11 @@ const Profile: NextPage = () => {
             </div>
             {/* Username */}
             <div className="flex flex-row gap-[7px] items-center">
-              <p className={`text-foreground font-medium ${styles.username}`}>Username</p>
+              <p className="text-foreground font-medium text-[27px] leading-[34px]">Username</p>
               <Image src={Verified} width={29} height={29} layout="fixed" alt="verfied badge" />
             </div>
             {/* User address */}
-            <p className={`text-primary-400 font-medium items-center ${styles.useraddress}`}>
+            <p className="text-primary-400 font-medium items-center text-[27px] leading-[34px]">
               {userAddress.slice(0, 9).concat('...').concat(userAddress.slice(-4))}
             </p>
             {/* Edit and Setting buttons */}
@@ -67,18 +66,18 @@ const Profile: NextPage = () => {
             <div className="flex flex-row p-[10px] gap-6">
               {/* Followers */}
               <div className="flex flex-row justify-center gap-[10px]">
-                <p className={`text-foreground font-medium ${styles.followers}`}>1200</p>
+                <p className="text-foreground font-medium text-[16px] leading-[20px]">1200</p>
                 <Image src={Followers} width={29} height={20} layout="fixed" alt="user followers" />
               </div>
               {/* Likes */}
               <div className="flex flex-row gap-[10px]">
-                <p className={`text-foreground font-medium ${styles.followers}`}>15k</p>
+                <p className="text-foreground font-medium text-[16px] leading-[20px]">15k</p>
                 <Image src={Likes} width={29} height={20} layout="fixed" alt="user followers" />
               </div>
             </div>
             {/* Sub info */}
             <div className="flex flex-row p-[10px] gap-[10px] w-full md:w-[407px] h-[140px]">
-              <p className={`text-shades-0 font-normal items-center ${styles.bio}`}>
+              <p className="text-shades-0 font-normal items-center text-[16px] leading-[24px]">
                 Sunt voluptatem aliquam maxime ad laudantium autem quia. Eveniet doloremque numquam quo. Iste sed nemo
                 qui delectus mollitia rerum magni modi. Culpa dolorum non ea. Reprehenderit earum voluptas quidem. Dolor
                 itaque amet vitae.
