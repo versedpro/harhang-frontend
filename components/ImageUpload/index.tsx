@@ -92,7 +92,7 @@ export default function ImageUpload({ setCard, card, isUploaded }: { setCard: an
             />
           </div>
           {cropData && (
-            <div className="float-right mb-12">
+            <div className="float-right mb-12 mt-5">
               <Button title="Upload" onClick={handleUpload} />
             </div>
           )}

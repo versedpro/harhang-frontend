@@ -19,6 +19,7 @@ export default function Container({ items }: { items: Item[] }) {
       <div className={styles.layout}>
         {items.map((element, index) => (
           <Card
+            variant="card"
             key={index}
             title={element.title}
             price={element.price}

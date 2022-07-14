@@ -3,8 +3,7 @@ import styles from '../styles/Home.module.css';
 import Link from 'next/link';
 import { MediaRenderer, useActiveListings, useMarketplace } from '@thirdweb-dev/react';
 import { useRouter } from 'next/router';
-import Card from '../components/Card/FormCard';
-import cards from '../data/cards';
+import { cards } from '../data';
 import Container from '../components/Container';
 
 const Home: NextPage = () => {
@@ -12,13 +11,13 @@ const Home: NextPage = () => {
 
   // Connect your marketplace smart contract here (replace this address)
   const marketplace = useMarketplace(
-    '0x277C0FB19FeD09c785448B8d3a80a78e7A9B8952' // Your marketplace contract address here
+    '' // Your marketplace contract address here
   );
 
   const { data: listings, isLoading: loadingListings } = useActiveListings(marketplace);
 
   return (
-    <>
+    <div className="container mx-auto">
       {/* Content */}
       <div className="mx-6">
         {/* Follow section */}
@@ -78,7 +77,7 @@ const Home: NextPage = () => {
           <Container items={cards} />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

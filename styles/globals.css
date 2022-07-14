@@ -6,6 +6,66 @@
   html {
     @appy font-readexPro;
   }
+  :root {
+    --background: theme('colors.white');
+    --background-secondary: theme('colors.gray.50');
+
+    --foreground: theme('colors.black');
+  
+    --primary-100: theme('colors.primary.100');
+    --primary-200: theme('colors.primary.200');
+    --primary-300: theme('colors.primary.300');
+    --primary-400: theme('colors.primary.400');
+    --primary-500: theme('colors.primary.500');
+  
+    --success-100: theme('colors.success.100');
+    --success-200: theme('colors.success.200');
+    --success-300: theme('colors.success.300');
+    --success-400: theme('colors.success.400');
+    --success-500: theme('colors.success.500');
+  
+    --warning-100: theme('colors.warning.100');
+    --warning-200: theme('colors.warning.200');
+    --warning-300: theme('colors.warning.300');
+    --warning-400: theme('colors.warning.400');
+    --warning-500: theme('colors.warning.500');
+  
+    --error-100: theme('colors.error.100');
+    --error-200: theme('colors.error.200');
+    --error-300: theme('colors.error.300');
+    --error-400: theme('colors.error.400');
+    --error-500: theme('colors.error.500');
+
+    --shades-0: theme('colors.shades.0');
+    --shades-100: theme('colors.shades.100');
+  
+    --neutral-50: theme('colors.neutral.50');
+    --neutral-100: theme('colors.neutral.100');
+    --neutral-150: theme('colors.neutral.150');
+    --neutral-200: theme('colors.neutral.200');
+    --neutral-250: theme('colors.neutral.250');
+    --neutral-300: theme('colors.neutral.300');
+    --neutral-350: theme('colors.neutral.350');
+    --neutral-400: theme('colors.neutral.400');
+    --neutral-450: theme('colors.neutral.450');
+    --neutral-500: theme('colors.neutral.500');
+  }
+  
+  [data-theme='dark'] {
+    --background: theme('colors.black');
+    --background-secondary: theme('colors.primary.500');
+
+    --foreground: theme('colors.white');
+  
+    --primary-100: theme('colors.primary.500');
+    --primary-200: theme('colors.primary.400');
+    --primary-300: theme('colors.primary.300');
+    --primary-400: theme('colors.primary.200');
+    --primary-500: theme('colors.primary.100');
+
+    --shades-0: theme('colors.shades.100');
+    --shades-100: theme('colors.shades.0');
+  }
 }
 
 @font-face {

@@ -3,7 +3,7 @@ export default [
     title: 'Empire Statement building',
     region: 'New York City',
     price: Math.floor(Math.random() * (50 - 0) + 0),
-    currency: 'matic',
+    currency: 'MATIC',
     image: '/image/empire.png',
     like: true
   },
@@ -11,7 +11,7 @@ export default [
     title: 'Tower of Pisa',
     region: 'Pisa',
     price: Math.floor(Math.random() * (50 - 0) + 0),
-    currency: 'matic',
+    currency: 'MATIC',
     image: '/image/pisa.png',
     like: false
   },
@@ -19,7 +19,7 @@ export default [
     title: 'Eiffel Tower',
     region: 'Paris',
     price: Math.floor(Math.random() * (50 - 0) + 0),
-    currency: 'matic',
+    currency: 'MATIC',
     image: '/image/eiffel.png',
     like: true
   },
@@ -27,7 +27,7 @@ export default [
     title: 'Everest',
     region: 'Himalaya',
     price: Math.floor(Math.random() * (50 - 0) + 0),
-    currency: 'matic',
+    currency: 'MATIC',
     image: '/image/everest.png',
     like: true
   },
@@ -35,7 +35,7 @@ export default [
     title: 'Empire Statement building',
     region: 'New York City',
     price: Math.floor(Math.random() * (50 - 0) + 0),
-    currency: 'matic',
+    currency: 'MATIC',
     image: '/image/empire.png',
     like: false
   },
@@ -43,7 +43,7 @@ export default [
     title: 'Tower of Pisa',
     region: 'Pisa',
     price: Math.floor(Math.random() * (50 - 0) + 0),
-    currency: 'matic',
+    currency: 'MATIC',
     image: '/image/pisa.png',
     like: true
   },
@@ -51,7 +51,7 @@ export default [
     title: 'Eiffel Tower',
     region: 'Paris',
     price: Math.floor(Math.random() * (50 - 0) + 0),
-    currency: 'matic',
+    currency: 'MATIC',
     image: '/image/eiffel.png',
     like: true
   },
@@ -59,7 +59,7 @@ export default [
     title: 'Everest',
     region: 'Himalaya',
     price: Math.floor(Math.random() * (50 - 0) + 0),
-    currency: 'matic',
+    currency: 'MATIC',
     image: '/image/everest.png',
     like: false
   },
@@ -67,7 +67,7 @@ export default [
     title: 'Empire Statement building',
     region: 'New York City',
     price: Math.floor(Math.random() * (50 - 0) + 0),
-    currency: 'matic',
+    currency: 'MATIC',
     image: '/image/empire.png',
     like: false
   },
@@ -75,7 +75,7 @@ export default [
     title: 'Tower of Pisa',
     region: 'Pisa',
     price: Math.floor(Math.random() * (50 - 0) + 0),
-    currency: 'matic',
+    currency: 'MATIC',
     image: '/image/pisa.png',
     like: false
   },
@@ -83,7 +83,7 @@ export default [
     title: 'Eiffel Tower',
     region: 'Paris',
     price: Math.floor(Math.random() * (50 - 0) + 0),
-    currency: 'matic',
+    currency: 'MATIC',
     image: '/image/eiffel.png',
     like: true
   },
@@ -91,7 +91,7 @@ export default [
     title: 'Everest',
     region: 'Himalaya',
     price: Math.floor(Math.random() * (50 - 0) + 0),
-    currency: 'matic',
+    currency: 'MATIC',
     image: '/image/everest.png',
     like: false
   },
@@ -99,7 +99,7 @@ export default [
     title: 'Empire Statement building',
     region: 'New York City',
     price: Math.floor(Math.random() * (50 - 0) + 0),
-    currency: 'matic',
+    currency: 'MATIC',
     image: '/image/empire.png',
     like: false
   },
@@ -107,7 +107,7 @@ export default [
     title: 'Tower of Pisa',
     region: 'Pisa',
     price: Math.floor(Math.random() * (50 - 0) + 0),
-    currency: 'matic',
+    currency: 'MATIC',
     image: '/image/pisa.png',
     like: false
   },
@@ -115,7 +115,7 @@ export default [
     title: 'Eiffel Tower',
     region: 'Paris',
     price: Math.floor(Math.random() * (50 - 0) + 0),
-    currency: 'matic',
+    currency: 'MATIC',
     image: '/image/eiffel.png',
     like: true
   },
@@ -123,7 +123,7 @@ export default [
     title: 'Everest',
     region: 'Himalaya',
     price: Math.floor(Math.random() * (50 - 0) + 0),
-    currency: 'matic',
+    currency: 'MATIC',
     image: '/image/everest.png',
     like: false
   }

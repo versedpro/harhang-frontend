@@ -1,37 +1,20 @@
+.searchBar {
+  @apply bg-primary-500 rounded-[12px];
+}
 
 .searchBar input {
-  @apply w-56 md:w-[570.09px];
-  height: 44px;
-
-  /* Primary/Primary 500 */
-  background: #1D4E7A;
-  border: none;
-  border-radius: 12px;
+  @apply w-56 md:w-[570.09px] h-[44px] bg-primary-500 border-none rounded-[12px] font-semibold text-[16px] leading-[20px] text-background;
   outline: 0ch;
-
-  /* Paragraph semi-bold */
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 20px;
-  
-  /* Shades/White */
-  color: #FFFFFF;
-  
-  /* Inside auto layout */
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 }
 
 .searchBar input::placeholder {
-  color: white;
+  @apply text-background;
 }
 
 .searchBar input:-ms-input-placeholder {
-  color: white;
+  @apply text-background;
 }
 
 .searchBar input::-ms-input-placeholder {
-  color: white;
+  @apply text-background;
 }

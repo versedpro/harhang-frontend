@@ -1,0 +1,4 @@
+.itemBox {
+  @apply flex flex-row justify-between items-center px-[20px] py-[14px] bg-primary-100 w-full md:w-[553px];
+  border-radius: 9px;
+}

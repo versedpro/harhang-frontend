@@ -1,18 +1,9 @@
 .title {
-  @apply items-center flex justify-center mb-[21px];
-  font-style: normal;
-  font-size: 47px;
-  font-weight: 700;
-  line-height: 59px;
-  color: #102A53;
+  @apply items-center flex justify-center mb-[21px] text-[47px] font-bold leading-[59px] text-neutral-500;
 }
 
 .locateButton {
-  @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2.5 px-3.5 mt-5 rounded;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 27px;
-  line-height: 34px;
+  @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2.5 px-3.5 mt-5 rounded font-bold text-[27px] leading-[34px];
 }
 
 .label {
